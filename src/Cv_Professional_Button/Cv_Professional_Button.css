@@ -1,0 +1,49 @@
+.cv__download__and__butons__contact {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+
+.cv__download__button > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 0.5px solid #2f9bf4;
+    background-color: transparent;
+    color: #2f9bf4;
+    max-width: 250px;
+    text-align: center;
+    padding: .8rem 3rem;
+    border-radius: 10px;
+}
+
+.cv__download__button > a:hover {    
+    background-color: #2f9bf4;
+    color: #fff;
+}
+
+.butons_contact {
+    display: flex;
+    gap: .3rem;
+}
+
+.butons_contact > a {
+    background-color: #e2e2e2;
+    padding: .7rem;
+    border-radius: 10px;
+}
+
+.butons_contact > a > div > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.butons_contact > a:hover {
+    background-color: #BAC0C4;
+}

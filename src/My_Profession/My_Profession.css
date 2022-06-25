@@ -1,0 +1,34 @@
+.my__professional__work {
+    margin: 40px 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.my__professional__work > div > h2 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.my__professional__work > div > h3 {
+    color: gray;
+    font-size: .850rem;
+}
+
+.years__of__work {
+    max-width: 80px;
+    min-width: 50px;
+}
+
+.completed__projects {
+    max-width: 80px;
+    min-width: 50px;
+}
+
+.satisfied__consumers {
+    min-width: 50px;
+    max-width: 80px;
+}

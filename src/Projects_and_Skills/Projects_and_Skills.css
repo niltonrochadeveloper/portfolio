@@ -1,0 +1,45 @@
+.projects__and__skills__box_width {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.projects__and__skills__box {
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    padding: .5rem .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.projects__and__skills__box > div {
+    width: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+.projects__and__skills__box div a {
+    display: grid;
+}
+
+.projects__and__skills__box div a span {
+    text-align: center;
+    padding: .7rem 3rem;
+}
+
+.projects__button > a > span {
+    background-color: #fff;
+    text-align: center;
+    min-width: 150px;
+    border-radius: 10px;
+}
+
+.skills__button > a > span {
+    /* background-color: #fff;     */
+    text-align: center;
+    min-width: 150px;
+    border-radius: 10px;
+}

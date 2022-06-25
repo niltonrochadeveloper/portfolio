@@ -1,0 +1,38 @@
+.profile__photo {
+    margin-top: 70px;
+    overflow: hidden;
+    align-self: center;
+    justify-self: center;
+    height: 110px;
+    border-radius: 100%;
+    text-align: center;
+    width: 110px;
+    background: linear-gradient(180deg, hsla(var(--hue), var(--sat), var(--lig), 1) 0%, hsla(var(--hue), var(--sat), var(--lig), .2) 100%);
+}
+
+.profile__photo > img {
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;  
+    gap: 1rem;  
+}
+
+.profile__name {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.profile__name > h2 {
+    color: gray;
+    font-size: .9rem;
+}
+
+.profile__icons {
+    display: flex;
+    justify-self: center;
+    gap: .9rem;
+}
+
+.profile__icons > a > i:hover {
+    color: blue;
+}
