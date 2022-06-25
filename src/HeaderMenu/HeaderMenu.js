@@ -1,6 +1,6 @@
 import './header.css';
 
-function Header() {
+function HeaderMenu() {
   return (
     <header>
       <div className='container'>
@@ -18,4 +18,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderMenu;

@@ -3,7 +3,7 @@ import './Profile.css';
 // photo
 import foto from './foto.png'
 
-function Profile__Header() {
+function ProfileHeader() {
   return (
     <header>
       <div className='container'>
@@ -24,4 +24,4 @@ function Profile__Header() {
   );
 }
 
-export default Profile__Header;
+export default ProfileHeader;

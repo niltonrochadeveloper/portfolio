@@ -3,24 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 
-import Profile__Header from './Profile__Header/Profile';
-import Header_Menu from './header_menu/Header_Menu';
+import ProfileHeader from './ProfileHeader/ProfileHeader';
+import HeaderMenu from './HeaderMenu/HeaderMenu';
 import Main from './main/Main';
-import Footer from './footer/Footer';
-import My_Profession from './My_Profession/My_Profession'
-import Cv_Professional_Button from './Cv_Professional_Button/Cv_Professional_Button'
-import Projects_and_Skills from './Projects_and_Skills/Projects_and_Skills'
+import Footer from './Footer/Footer';
+import MyProfession from './MyProfession/MyProfession'
+import CvProfessionalButton from './CvProfessionalButton/CvProfessionalButton'
+import ProjectsAndSkills from './ProjectsAndSkills/ProjectsAndSkills'
 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Profile__Header />
-    <My_Profession />
-    <Cv_Professional_Button />
-    <Projects_and_Skills />
-    <Header_Menu />
+    <ProfileHeader />
+    <MyProfession />
+    <CvProfessionalButton />
+    <ProjectsAndSkills />
+    <HeaderMenu />
     <Main />
     <Footer />
   </React.StrictMode>

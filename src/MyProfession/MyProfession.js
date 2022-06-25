@@ -1,6 +1,6 @@
 import './My_Profession.css';
 
-function My_Profession() {
+function MyProfession() {
   return (
     <header>
       <div className='container'>
@@ -23,4 +23,4 @@ function My_Profession() {
   );
 }
 
-export default My_Profession;
+export default MyProfession;

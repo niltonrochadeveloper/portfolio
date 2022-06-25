@@ -1,7 +1,7 @@
 import './Projects_and_Skills.css';
 
 
-function Projects_and_Skills() {
+function ProjectsAndSkills() {
   return (
     <header>
       <div className='container'>
@@ -24,4 +24,4 @@ function Projects_and_Skills() {
   );
 }
 
-export default Projects_and_Skills;
+export default ProjectsAndSkills;

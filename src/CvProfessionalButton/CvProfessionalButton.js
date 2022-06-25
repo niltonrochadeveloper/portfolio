@@ -1,6 +1,6 @@
 import './Cv_Professional_Button.css';
 
-function My_Profession() {
+function MyProfessionButton() {
   return (
     <header>
       <div className='container'>
@@ -29,4 +29,4 @@ function My_Profession() {
   );
 }
 
-export default My_Profession;
+export default MyProfessionButton;
