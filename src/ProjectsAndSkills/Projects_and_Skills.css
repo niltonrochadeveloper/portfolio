@@ -1,7 +1,14 @@
 .projects__and__skills__box_width {
-    padding: 3rem;
+    display: flex;
+    justify-content: center;    
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.centered-box {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .projects__and__skills__box {
@@ -13,6 +20,7 @@
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+    max-width: 420px;
 }
 
 .projects__and__skills__box > div {
@@ -42,4 +50,23 @@
     text-align: center;
     min-width: 150px;
     border-radius: 10px;
+}
+
+.skills_list div, .projects_list div {
+    /* border: 1px solid red; */
+    padding: .5rem;
+    min-width: 280px;
+}
+
+.skills_list div h3, .projects_list div h3 {
+    /* border: 1px solid blue; */
+    padding: .5rem;
+    text-align: center;
+}
+
+
+.projects__and_skills__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
 }

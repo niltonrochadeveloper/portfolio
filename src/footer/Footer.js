@@ -5,7 +5,7 @@ function Footer() {
         <footer className="container">
             <section>
                 <article>
-                    Footer
+                    
                 </article>
             </section>
         </footer>

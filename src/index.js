@@ -4,7 +4,7 @@ import './index.css';
 
 
 import ProfileHeader from './ProfileHeader/ProfileHeader';
-import HeaderMenu from './HeaderMenu/HeaderMenu';
+// import HeaderMenu from './HeaderMenu/HeaderMenu';
 import Main from './main/Main';
 import Footer from './Footer/Footer';
 import MyProfession from './MyProfession/MyProfession'
@@ -16,11 +16,12 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* <HeaderMenu />   */}
     <ProfileHeader />
     <MyProfession />
     <CvProfessionalButton />
     <ProjectsAndSkills />
-    <HeaderMenu />
+    
     <Main />
     <Footer />
   </React.StrictMode>
