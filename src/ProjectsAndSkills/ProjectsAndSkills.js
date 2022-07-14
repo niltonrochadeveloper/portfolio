@@ -4,21 +4,21 @@ import './Projects_and_Skills.css';
 function ProjectsAndSkills() {
   return (
       <div className='container centered-box'>
-        <div className='projects__and__skills__box_width'>
-          <div className='projects__and__skills__box'>
-              <div className='projects__button'>
+        <div className='projects-and-skills-box-width'>
+          <div className='projects-and-skills-box'>
+              <div className='projects-button'>
                   <a href='/'>
                       <span>Projects</span>
                   </a>
               </div>
-              <div className='skills__button'>
+              <div className='skills-button'>
                   <a href='/'>
                       <span>Skills</span>
                   </a>
               </div>
           </div>
-          <div className='projects__and_skills__list'>
-            <div className='projects_list'>
+          <div className='projects-and-skills-list'>
+            <div className='projects-list'>
               <div>
                 <h3>Frontend Developer</h3>
                 <div>
@@ -26,15 +26,15 @@ function ProjectsAndSkills() {
                   <div>React</div>
                   <div>CSS</div>
                   <div>React</div>
-                  <div>Boodtrap</div>
+                  <div>Bootstrap</div>
                   <div>Gits</div>
                 </div>
               </div>
             </div>
-            <div className='skills_list'>
+            <div className='skills-list'>
               <div>
                 <h3>Backend Developer</h3>
-                <div className='skills_listing'>
+                <div className='skills-listing'>
                   <div>PHP</div>
                   <div>Python</div>
                   <div>MySql</div>

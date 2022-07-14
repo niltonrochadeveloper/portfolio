@@ -18,11 +18,10 @@ body {
   font-size: .9rem;
 }
 
-
-
 @media screen and (min-width: 991px) {
   .container {
-    margin: 0 5rem;
+    margin-left: 0 5rem;
+    margin-right: 0 5rem;
     display: grid;
     gap: .500rem;
   }
@@ -30,7 +29,8 @@ body {
 
 @media screen and (max-width: 992px) {
   .container {
-    margin: 0 2rem;
+    margin-left: 0 2rem;
+    margin-right: 0 2rem;
     display: grid;
     gap: .400rem;
   }
@@ -38,7 +38,8 @@ body {
 
 @media screen and (max-width: 600px) {
   .container {
-    margin: 0 .600rem;
+    margin-left: 0 .600rem;
+    margin-right: 0 .600rem;
     display: grid;
     gap: .300rem;
   }
@@ -53,13 +54,11 @@ h1 {
 h2 {
   font-size: 1.25rem;
   font-weight: 500;
-
 }
 
 h3 {
   font-size: 1rem;
   font-weight: 500;
-
 }
 
 .button {
