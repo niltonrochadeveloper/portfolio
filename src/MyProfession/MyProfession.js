@@ -17,7 +17,7 @@ function MyProfession() {
                 {/* <small className='yow'>Completed Projects</small> */}
             </div>
             <div className='satisfied__consumers'>
-                <h2>96</h2>
+                <h2>+20</h2>
                 <h3>Clientes Satisfeitos</h3>
                 {/* <small className='yow'>Satisfied Consumers</small> */}
             </div>

@@ -8,7 +8,7 @@ function ProjectsAndSkills() {
           <div className='projects-and-skills-box'>
               <div className='projects-button'>
                   <a href='/'>
-                      <span>Projects</span>
+                      <span>Projetos</span>
                   </a>
               </div>
               <div className='skills-button'>
@@ -25,9 +25,10 @@ function ProjectsAndSkills() {
                   <div>HTML</div>
                   <div>React</div>
                   <div>CSS</div>
-                  <div>React</div>
+                  <div>Angular (em estudo)</div>
                   <div>Bootstrap</div>
-                  <div>Gits</div>
+                  <div>Git</div>
+                  <div>SEO e Analytics</div>
                 </div>
               </div>
             </div>

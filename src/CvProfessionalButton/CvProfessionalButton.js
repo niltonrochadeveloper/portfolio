@@ -6,7 +6,7 @@ function MyProfessionButton() {
       <div className='container'>
         <div className='cv__download__and__butons__contact'>
             <div className='cv__download__button'>
-                <a href='/'>
+                <a href='/' download>
                     <span>Download</span>
                     <i class="ri-download-line ri-lg"></i>
                 </a>
