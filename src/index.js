@@ -9,7 +9,7 @@ import Main from './main/Main';
 import Footer from './Footer/Footer';
 import MyProfession from './MyProfession/MyProfession'
 import CvProfessionalButton from './CvProfessionalButton/CvProfessionalButton'
-import ProjectsAndSkills from './ProjectsAndSkills/ProjectsAndSkills'
+// import ProjectsAndSkills from './ProjectsAndSkills/ProjectsAndSkills'
 
 import reportWebVitals from './reportWebVitals';
 
@@ -20,7 +20,7 @@ root.render(
     <ProfileHeader />
     <MyProfession />
     <CvProfessionalButton />
-    <ProjectsAndSkills />
+    {/* <ProjectsAndSkills /> */}
     
     <Main />
     <Footer />

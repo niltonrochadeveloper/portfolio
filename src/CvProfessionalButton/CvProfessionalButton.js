@@ -1,4 +1,5 @@
 import './Cv_Professional_Button.css';
+import curriculo from './nilton-rocha-web-full-stack.pdf'
 
 function MyProfessionButton() {
   return (
@@ -6,7 +7,7 @@ function MyProfessionButton() {
       <div className='container'>
         <div className='cv__download__and__butons__contact'>
             <div className='cv__download__button'>
-                <a href='/' download>
+                <a href={curriculo} download>
                     <span>Download</span>
                     <i class="ri-download-line ri-lg"></i>
                 </a>
