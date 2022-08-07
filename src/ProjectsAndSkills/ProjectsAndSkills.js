@@ -72,7 +72,7 @@ function ProjectsAndSkills() {
                   </small>
                 </div>
               </a>
-              <a target="_blank" rel="noreferrer noopener" href="https://github.io/niltonrochadeveloper/portfolio">
+              <a target="_blank" rel="noreferrer noopener" href="https://niltonrochadeveloper.github.io/portfolio/">
                 <div className='box-list'>
                   <div>
                     <image src="#"></image>
