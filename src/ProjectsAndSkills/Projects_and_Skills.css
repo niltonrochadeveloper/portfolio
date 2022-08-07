@@ -5,95 +5,81 @@
 
 .projects-and-skills-box-width {
     display: flex;
-    justify-content: center;  
-    align-items: center;  
-    flex-direction: column;
-    margin: 40px 0;
-    max-width: 360px;
-    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 310px;
+    width: 100%;
+    margin: 40px 0px;
 }
 
 
 
 .projects-and-skills-box {
     background-color: #e2e2e2;
+    margin: 0 0 25px 0;
     border-radius: 12px;
-    padding: .4rem 1rem;
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: center;
-    max-width: 320px;
-
-}
-
-.projects-and-skills-box > div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.projects-and-skills-box div a {
+    padding: .4rem;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .4rem;
+    width: 100%;
 }
 
-.projects-and-skills-box div a span {
-    text-align: center;
-    padding: .7rem 3rem;
+button, button:active {
+    border-style: none;
+    border-radius: 10px;
+}
+
+.projects-and-skills-box button a {
+    display: flex;
     
 }
 
-.projects-button, .skills-button {
-    width: 100%;
+.projects-and-skills-box button a span {
+    text-align: center;
+    border-radius: 10px;
+    padding: .8rem 0;
 }
 
-
-.projects-button > a > span {
-    background-color: #fff;
-    text-align: center;
-
-    width: 100%;
+.projects-button:hover, 
+.skills-button:hover {
+    background-color: #f1f1f1;
     border-radius: 10px;
 }
 
+.projects-button > a , 
+.skills-button > a {
+    color: #000;
+}
+
+.projects-button > a > span , 
 .skills-button > a > span {
-    text-align: center;
     width: 100%;
-    border-radius: 10px;
-    /* background-color: red; */
-    display: flex;
 }
 
 .projects-and-skills-list {
     display: flex;
-    justify-content: center;
-    column-gap: 5rem;
-    flex-wrap: wrap;
-    
-    background-color: blue;
+    justify-content: space-around;
+    width: 100%;
     align-items: center;
-    max-width: 360px;
+    position: relative;
+    height: 100%;
 }
 
 .skills-list, .projects-list {
     display: flex;
-    position: absolute;  
-}
-
-.skills-list > div, .projects-list > div {
-    padding: .5rem;
-    flex-wrap: wrap;
-    min-width: 320px;
-     
-}
-
-.skills-list div h3, .projects-list div h3 {
-    /* border: 1px solid blue; */
-    padding: .5rem;
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
     text-align: center;
 }
 
+.skills-list {
+    display: none;
+}
 
+.projects-box-list, .skills-box-list {
+    display: grid;
+    padding-bottom: 50px;
+    grid-template-columns: 1fr 1fr;
+}

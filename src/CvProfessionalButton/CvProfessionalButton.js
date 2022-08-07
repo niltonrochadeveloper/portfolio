@@ -9,18 +9,18 @@ function MyProfessionButton() {
             <div className='cv__download__button'>
                 <a href={curriculo} download>
                     <span>Download</span>
-                    <i class="ri-download-line ri-lg"></i>
+                    <i className="ri-download-line ri-lg"></i>
                 </a>
             </div>
             <div className='butons_contact'>
                 <a href='/'>
                     <div className='whatsapp__button'>
-                        <i class="ri-whatsapp-line ri-lg"></i>
+                        <i className="ri-whatsapp-line ri-lg"></i>
                     </div>
                 </a>
                 <a href='/'>
                     <div className='messenger__button'>
-                        <i class="ri-messenger-line ri-lg"></i>
+                        <i className="ri-messenger-line ri-lg"></i>
                     </div>
                 </a>
             </div>

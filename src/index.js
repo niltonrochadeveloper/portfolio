@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-
-import ProfileHeader from './ProfileHeader/ProfileHeader';
 // import HeaderMenu from './HeaderMenu/HeaderMenu';
-import Main from './main/Main';
-import Footer from './Footer/Footer';
+import ProfileHeader from './ProfileHeader/ProfileHeader';
 import MyProfession from './MyProfession/MyProfession'
 import CvProfessionalButton from './CvProfessionalButton/CvProfessionalButton'
-// import ProjectsAndSkills from './ProjectsAndSkills/ProjectsAndSkills'
+import ProjectsAndSkills from './ProjectsAndSkills/ProjectsAndSkills'
+// import Main from './main/Main';
+// import Footer from './Footer/Footer';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -20,10 +19,9 @@ root.render(
     <ProfileHeader />
     <MyProfession />
     <CvProfessionalButton />
-    {/* <ProjectsAndSkills /> */}
-    
-    <Main />
-    <Footer />
+    <ProjectsAndSkills />    
+    {/* <Main />
+    <Footer /> */}
   </React.StrictMode>
 );
 
