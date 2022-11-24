@@ -77,3 +77,31 @@ h3 {
   transition: 3ms;
   cursor: pointer;;
 }
+
+
+
+
+@keyframes slidein {
+  from {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+  }
+
+  /* to {
+    margin-left: 0%;
+    width: 100%;
+  } */
+}
+
+@keyframes slidein2 {
+  from {
+    margin-top: 15px;
+    opacity: 0;
+  }
+
+  /* to {
+    margin-left: 0%;
+    width: 100%;
+  } */
+}

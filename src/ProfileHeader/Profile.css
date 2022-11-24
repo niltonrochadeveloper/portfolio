@@ -1,12 +1,12 @@
 .top {
     width: 100%;
     position: absolute;
-    height: 150px;
+    height: 120px;
     background-color: #2f9bf4;
 }
 
 .profile__photo {
-    margin-top: 90px;
+    margin-top: 60px;
     z-index: 999;
     overflow: hidden;
     align-self: center;
@@ -14,10 +14,10 @@
     height: 115px;
     border-radius: 50%;
     text-align: center;
-    width: 115px;
     background: linear-gradient(180deg, hsla(var(--hue), var(--sat), var(--lig), 1) 0%, hsla(var(--hue), var(--sat), var(--lig), .2) 100%);
     border: 6px solid white;
-
+    animation-duration: 2s;
+    animation-name: slidein;
 }
 
 .profile__photo > img {
@@ -28,8 +28,10 @@
 }
 
 .profile__name {
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     text-align: center;
+    animation-duration: 2s;
+    animation-name: slidein2;
 }
 
 .profile__name > h3 {
@@ -37,9 +39,12 @@
 }
 
 .profile__icons {
+    margin: 20px 0 0 0;
     display: flex;
     justify-self: center;
     gap: .9rem;
+    animation-duration: 2s;
+    animation-name: slidein2;
 }
 
 .profile__icons > a > i:hover {
