@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.947c2b8d.css",
-    "main.js": "/portfolio/static/js/main.b1f26035.js",
+    "main.css": "/portfolio/static/css/main.f7f6e46c.css",
+    "main.js": "/portfolio/static/js/main.3ba20a0f.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/nilton-rocha-web-full-stack.pdf": "/portfolio/static/media/nilton-rocha-web-full-stack.af59c50ebe45391275f1.pdf",
     "static/media/foto.png": "/portfolio/static/media/foto.0e33801e51892d4f39f7.png",
     "index.html": "/portfolio/index.html",
-    "main.947c2b8d.css.map": "/portfolio/static/css/main.947c2b8d.css.map",
-    "main.b1f26035.js.map": "/portfolio/static/js/main.b1f26035.js.map",
+    "main.f7f6e46c.css.map": "/portfolio/static/css/main.f7f6e46c.css.map",
+    "main.3ba20a0f.js.map": "/portfolio/static/js/main.3ba20a0f.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.947c2b8d.css",
-    "static/js/main.b1f26035.js"
+    "static/css/main.f7f6e46c.css",
+    "static/js/main.3ba20a0f.js"
   ]
 }
