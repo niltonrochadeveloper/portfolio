@@ -12,6 +12,7 @@
     align-self: center;
     justify-self: center;
     height: 115px;
+    width: 115px;
     border-radius: 50%;
     text-align: center;
     background: linear-gradient(180deg, hsla(var(--hue), var(--sat), var(--lig), 1) 0%, hsla(var(--hue), var(--sat), var(--lig), .2) 100%);
