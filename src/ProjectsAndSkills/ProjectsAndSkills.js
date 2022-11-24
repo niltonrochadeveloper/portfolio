@@ -1,6 +1,51 @@
+// import { useState } from 'react';
 import './Projects_and_Skills.css';
 
 function ProjectsAndSkills() {
+
+  function projectsActived(e) {
+    e.preventDefault()
+
+    // console.log("projects ativado")
+
+  var projects = document.querySelector("#projectsId")
+  var skills = document.querySelector("#skillsId")
+  var projectsList = document.querySelector(".projects-list")
+  var skillsList = document.querySelector(".skills-list")
+    
+  projects.style.backgroundColor = "#fff";
+  projects.style.borderRadius = "12px";
+  projectsList.style.display = "block";
+
+  skills.style.backgroundColor = "#f2f2f2" 
+  skills.style.borderRadius = "12px"; 
+
+  skillsList.style.display = "none";
+    
+  }
+
+  function skillsActived(e) {
+    e.preventDefault()
+
+    // console.log("skills ativado")
+
+  var projects = document.querySelector("#projectsId")
+  var skills = document.querySelector("#skillsId")
+  var projectsList = document.querySelector(".projects-list")
+  var skillsList = document.querySelector(".skills-list")
+
+
+  
+  skills.style.backgroundColor = "#fff" 
+  skills.style.borderRadius = "12px";
+  skillsList.style.display = "block";
+
+  projects.style.backgroundColor = "#f2f2f2"
+  projects.style.borderRadius = "12px";
+
+  projectsList.style.display = "none";
+  
+  }
 
   return (
     <div className='container centered-box'>
@@ -115,50 +160,6 @@ function ProjectsAndSkills() {
       </div>
     </div>
   );
-
-  function projectsActived(e) {
-    e.preventDefault()
-
-    // console.log("projects ativado")
-
-  var projects = document.querySelector("#projectsId")
-  var skills = document.querySelector("#skillsId")
-  var projectsList = document.querySelector(".projects-list")
-  var skillsList = document.querySelector(".skills-list")
-    
-  projects.style.backgroundColor = "#fff";
-  projects.style.borderRadius = "12px";
-  projectsList.style.display = "block";
-
-  skills.style.backgroundColor = "#f2f2f2" 
-  skills.style.borderRadius = "12px"; 
-
-  skillsList.style.display = "none";
-    
-  }
-
-  function skillsActived(e) {
-    e.preventDefault()
-
-    // console.log("skills ativado")
-
-  var projects = document.querySelector("#projectsId")
-  var skills = document.querySelector("#skillsId")
-  var projectsList = document.querySelector(".projects-list")
-  var skillsList = document.querySelector(".skills-list")
-
-
-  
-  skills.style.backgroundColor = "#fff" 
-  skills.style.borderRadius = "12px";
-  skillsList.style.display = "block";
-
-  projects.style.backgroundColor = "#f2f2f2"
-  projects.style.borderRadius = "12px";
-
-  projectsList.style.display = "none";
-  
-  }
 
 }
 

@@ -20,14 +20,14 @@
     border-radius: 12px;
     padding: .4rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: .4rem;
     width: 100%;
 }
 
 button, button:active {
     border-style: none;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .projects-and-skills-box button a {
@@ -39,6 +39,10 @@ button, button:active {
     text-align: center;
     border-radius: 10px;
     padding: .8rem 0;
+}
+
+.projects-button {
+    background-color: #fff;
 }
 
 .projects-button:hover, 
