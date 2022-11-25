@@ -40,7 +40,7 @@
 }
 
 .profile__icons {
-    margin: 20px 0 0 0;
+    margin-top: 20px;
     display: flex;
     justify-self: center;
     gap: .9rem;
@@ -48,6 +48,15 @@
     animation-name: slidein2;
 }
 
+.profile__icons > a > i, .profile__icons > a:active {
+    color: #333;
+}
+
 .profile__icons > a > i:hover {
-    color: blue;
+    color: #2f9bf4;
+    padding-bottom: 30px;
+}
+
+.profile__icons > a:hover {
+    margin-top: -2px;
 }

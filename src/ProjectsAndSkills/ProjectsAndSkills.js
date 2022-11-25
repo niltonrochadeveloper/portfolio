@@ -8,59 +8,48 @@ function ProjectsAndSkills() {
 
     // console.log("projects ativado")
 
-  var projects = document.querySelector("#projectsId")
-  var skills = document.querySelector("#skillsId")
+  var projects = document.querySelector("#projects-button")
+  var skills = document.querySelector("#skills-button")
   var projectsList = document.querySelector(".projects-list")
   var skillsList = document.querySelector(".skills-list")
-    
-  projects.style.backgroundColor = "#fff";
-  projects.style.borderRadius = "12px";
-  projectsList.style.display = "block";
 
-  skills.style.backgroundColor = "#f2f2f2" 
-  skills.style.borderRadius = "12px"; 
+  projects.setAttribute("class", "ativado")
+  skills.removeAttribute("class", "ativado")
+  skills.setAttribute("class", "desativado")
 
   skillsList.style.display = "none";
+  projectsList.style.display = "block";
     
   }
 
   function skillsActived(e) {
     e.preventDefault()
 
-    // console.log("skills ativado")
-
-  var projects = document.querySelector("#projectsId")
-  var skills = document.querySelector("#skillsId")
+  var projects = document.querySelector("#projects-button")
+  var skills = document.querySelector("#skills-button")
   var projectsList = document.querySelector(".projects-list")
   var skillsList = document.querySelector(".skills-list")
 
-
-  
-  skills.style.backgroundColor = "#fff" 
-  skills.style.borderRadius = "12px";
-  skillsList.style.display = "block";
-
-  projects.style.backgroundColor = "#f2f2f2"
-  projects.style.borderRadius = "12px";
+  projects.removeAttribute("class", "ativado")
+  projects.setAttribute("class", "desativado")
+  skills.setAttribute("class", "ativado")
 
   projectsList.style.display = "none";
+  skillsList.style.display = "block";
   
   }
 
   return (
     <div className='container centered-box'>
       <div className='projects-and-skills-box-width'>
+
         <div className='projects-and-skills-box'>
-          <button className='projects-button' onClick={projectsActived}>
-              <a id='projectsId' href='/'>
-                <span>Projetos</span>
-              </a>
-          </button>
-          <button className='skills-button' onClick={skillsActived}>
-              <a id='skillsId' href='/'>
-                <span>Skills</span>
-              </a>
-          </button>
+          <span id='projects-button' className='ativado' onClick={projectsActived}>
+            Projetos
+          </span>
+          <span id='skills-button' className='desativado' onClick={skillsActived}>
+            Skills
+          </span>
         </div>
         <div className='projects-and-skills-list'>
           <div className='projects-list'>
@@ -113,7 +102,7 @@ function ProjectsAndSkills() {
                     <image src="#"></image>
                   </div>
                   <small>
-                    netsofás
+                    blog netsofás
                   </small>
                 </div>
               </a>
@@ -157,6 +146,7 @@ function ProjectsAndSkills() {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
