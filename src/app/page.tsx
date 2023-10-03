@@ -10,7 +10,7 @@ export default function Home() {
   return (
       <main style={{ display: 'flex', flexDirection: 'column', padding: '48px 16px', justifyContent: 'space-around', gap: '40px', }}>
         <VStack space={32}>
-          <Image alt='foto perfil' src='/images/header/foto.png' width={100} height={100} style={{ borderRadius: '100%' }} />
+          <Image alt='foto perfil' src='/images/header/foto.jpg' width={100} height={100} style={{ borderRadius: '100%' }} />
           <VStack>
             <h1 style={{ fontSize: '18px', fontWeight: '600', }}>Nilton Rocha</h1>
             <h3 style={{ fontSize: '12.5px', color: '#606060', fontWeight: '500' }}>Desenvolvedor Web e Mobile</h3>
@@ -21,7 +21,7 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/devnilton/" target="_blank" rel="noreferrer"><FaLinkedinIn color="#202020" /></a>
           <a href="https://github.com/niltonrochadeveloper" target="_blank" rel="noreferrer"><FaGithub color="#202020" /></a>
         </HStack>
-        <HStack space={50}>
+        <HStack space={48}>
           <VStack>
             <h3 style={{ fontSize: '16px'}}>+3</h3>
             <div style={{ maxWidth: '120px', textAlign: 'center'}}>
@@ -41,15 +41,15 @@ export default function Home() {
             </div>
           </VStack>
         </HStack>
-        <div style={{ display: 'flex', width: '100%', justifyContent: 'space-around', alignItems: 'center', gap: '40px', }}>
-          <div style={{ width: '50%', display: 'flex', justifyContent: 'flex-end'}}>
+        <HStack space={48}>
+          <div style={{ width: '35%', display: 'flex', justifyContent: 'flex-end'}}>
             <Button>Download</Button>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'row', width: '50%', alignItems: 'center', gap: '15px'  }}>
-            <div><a href="" target="_blank" rel="noreferrer"><FaWhatsapp /></a></div>
-            <div><a href="" target="_blank" rel="noreferrer"><FaMailBulk /></a></div>
-          </div>
-        </div>
+          <HStack space={16} style={{ justifyContent: 'flex-start', alignItems: 'center', width: '25%' }} >
+            <a href="" target="_blank" rel="noreferrer"><FaWhatsapp /></a>
+            <a href="" target="_blank" rel="noreferrer"><FaMailBulk /></a>
+          </HStack>
+        </HStack>
       </main>
   )
 }
