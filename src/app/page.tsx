@@ -1,14 +1,17 @@
 'use client'
 
 
-import { Button, HStack, VStack } from '@/components/Core';
+import { Button, HStack, VStack, } from '@/components/Core';
 import Image from 'next/image'
 
 import { FaInstagram, FaLinkedinIn, FaGithub, FaWhatsapp, FaMailBulk } from 'react-icons/fa';
 
 export default function Home() {
   return (
-      <main style={{ display: 'flex', flexDirection: 'column', padding: '48px 16px', justifyContent: 'space-around', gap: '40px', }}>
+      <main style={{ display: 'flex', flexDirection: 'column', padding: '16px', justifyContent: 'space-around', gap: '40px', }}>
+        <HStack style={{ justifyContent: "flex-end" }}>
+          <a href=''>Login</a>
+        </HStack>
         <VStack space={32}>
           <Image alt='foto perfil' src='/images/header/foto.jpg' width={100} height={100} style={{ borderRadius: '100%' }} />
           <VStack>
