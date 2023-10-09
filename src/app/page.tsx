@@ -3,10 +3,19 @@
 
 import { Button, HStack, VStack, } from '@/components/Core';
 import Image from 'next/image'
+import { useState } from 'react';
 
 import { FaInstagram, FaLinkedinIn, FaGithub, FaWhatsapp, FaMailBulk } from 'react-icons/fa';
 
 export default function Home() {
+
+  const [ showModal, setShowModal ] = useState(false)
+
+  const Modal = ({isOpen}: {isOpen: boolean}) => {
+
+    
+  }
+
   return (
       <main style={{ display: 'flex', flexDirection: 'column', padding: '16px', justifyContent: 'space-around', gap: '40px', }}>
         <HStack style={{ justifyContent: "flex-end" }}>
