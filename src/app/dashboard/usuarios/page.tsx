@@ -1,13 +1,32 @@
 'use client'
 
-import { Button, VStack } from "@/components/Core";
+import { Button, HStack, VStack } from "@/components/Core";
 import { data } from "autoprefixer";
 import { url } from "inspector";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from 'next/navigation'
 
 const Usuarios = () => {
+
+    const [users, setUsers] = useState<any>([])
+
+    const router = useRouter()
+
+    useEffect(() => {
+        const result = async () => {
+            const res = await fetch('http://localhost:8000/user', {
+                method: 'get',
+            })
+            
+            const result = await res.json()
+            setUsers(result.result.users)
+        }
+
+        result()
+        
+        
+    }, [router])
 
     const {
         register,
@@ -48,16 +67,30 @@ const Usuarios = () => {
         dataFetch()    
       };
 
+      
+
+      
+
     return (
-        <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center' }}>
-            <form onSubmit={handleSubmit(formSubmit)}>
-                <VStack space={16}>
-                    <input type="username" {...register("username")} name="username" placeholder="Nome" style={{ borderColor: '#323232', borderWidth: 1, borderRadius: '24px', padding: '8px 16px' }}></input>
-                    <input type="email" {...register("email")} placeholder="E-mail" style={{ borderColor: '#323232', borderWidth: 1, borderRadius: '24px', padding: '8px 16px' }}></input>
-                    <input type="password" {...register("password")} placeholder="Senha" style={{ borderColor: '#323232', borderWidth: 1, borderRadius: '24px', padding: '8px 16px' }}></input>
-                    <Button type="submit">Acessar</Button>
-                </VStack>
-            </form>
+        <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center' }} >
+            <HStack space={20}>
+                
+                <form onSubmit={handleSubmit(formSubmit)}>
+                    <VStack space={16}>
+                        <input type="username" {...register("username")} name="username" placeholder="Nome" style={{ borderColor: '#323232', borderWidth: 1, borderRadius: '24px', padding: '8px 16px' }}></input>
+                        <input type="email" {...register("email")} placeholder="E-mail" style={{ borderColor: '#323232', borderWidth: 1, borderRadius: '24px', padding: '8px 16px' }}></input>
+                        <input type="password" {...register("password")} placeholder="Senha" style={{ borderColor: '#323232', borderWidth: 1, borderRadius: '24px', padding: '8px 16px' }}></input>
+                        <Button type="submit">Acessar</Button>
+                    </VStack>
+                </form>
+                <div>
+                    {users.map((item: any) => {
+                        <div style={{ backgroundColor: "#000", borderRadius: 12, padding: 12, }}>
+                            <p style={{ color: '#fff', fontSize: '20px' }}>{item.username}</p>
+                        </div>
+                    })}
+                </div>
+            </HStack>
         </div>
     )
 };

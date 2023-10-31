@@ -1,10 +1,11 @@
 import { CSSProperties } from 'react'
 import styles from './VStack.module.scss'
 
-const VStack = ({children, space}: {children: React.ReactNode, space?: number}) => {
+const VStack = ({children, space = 0, style}: {children: React.ReactNode, space?: number, style?: CSSProperties}) => {
 
-     const style = {
-        gap: space ?? 0
+    var styled = {
+        gap: style?.gap ? style.gap : space,
+        ...style
     }
 
     return (
