@@ -28,9 +28,9 @@ export default function RootLayout({
           <Title fontWeight={500}>Nilton Rocha</Title>
           <HStack className={'desktop'} space={16}>
             <Link href={'/'}><p>Home</p></Link>
-            <Link href={'/'}><p>Sobre</p></Link>
-            <Link href={'/'}><p>Portfólio</p></Link>
-            <Link href={'/'}><p>Contato</p></Link>
+            <Link href={'/sobre'}><p>Sobre</p></Link>
+            <Link href={'/portfolio'}><p>Portfólio</p></Link>
+            <Link href={'/contato'}><p>Contato</p></Link>
           </HStack>
         </div>
         <HStack space={16} className={'center'} style={{ position: 'absolute', right: 16, bottom: 12 }}>

@@ -10,7 +10,7 @@ const VStack = ({children, space = 0, className = '', style}: {children: React.R
 
     return (
         <div className={`${className}`}>
-            <div className={`${styles.container} className`} style={styled}>
+            <div className={`${styles.container} ${className}`} style={styled}>
                 {children}
             </div>
         </div>

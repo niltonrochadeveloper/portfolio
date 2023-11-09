@@ -11,22 +11,25 @@ const Usuarios = () => {
 
     const [users, setUsers] = useState<any>([])
 
-    const router = useRouter()
+    const navigation = useRouter()
 
+    const fetchData = async () => {
+        const response = await fetch('http://localhost:8000/user', {
+            method: 'GET',
+        })
+        
+        const dados = await response.json()
+        setUsers(dados.result.users)
+    }
     useEffect(() => {
-        const result = async () => {
-            const res = await fetch('http://localhost:8000/user', {
-                method: 'get',
-            })
-            
-            const result = await res.json()
-            setUsers(result.result.users)
-        }
 
-        result()
+        if (users.length <= 0) {    
+            fetchData()
+        } else {
+            console.log('users', users)
+        }
         
-        
-    }, [router])
+    }, [users])
 
     const {
         register,
@@ -42,8 +45,6 @@ const Usuarios = () => {
         email: string, 
         password: string
       }
-
-      const navigation = useRouter()
 
       const dataFetch = async () => {
         const result = await fetch('http://localhost:8000/user/create', {
@@ -68,27 +69,43 @@ const Usuarios = () => {
       };
 
       
-
+      
       
 
     return (
         <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center' }} >
             <HStack space={20}>
                 
-                <form onSubmit={handleSubmit(formSubmit)}>
+                {/* <form onSubmit={handleSubmit(formSubmit)}>
                     <VStack space={16}>
                         <input type="username" {...register("username")} name="username" placeholder="Nome" style={{ borderColor: '#323232', borderWidth: 1, borderRadius: '24px', padding: '8px 16px' }}></input>
                         <input type="email" {...register("email")} placeholder="E-mail" style={{ borderColor: '#323232', borderWidth: 1, borderRadius: '24px', padding: '8px 16px' }}></input>
                         <input type="password" {...register("password")} placeholder="Senha" style={{ borderColor: '#323232', borderWidth: 1, borderRadius: '24px', padding: '8px 16px' }}></input>
                         <Button type="submit">Acessar</Button>
                     </VStack>
-                </form>
+                </form> */}
+
                 <div>
-                    {users.map((item: any) => {
-                        <div style={{ backgroundColor: "#000", borderRadius: 12, padding: 12, }}>
-                            <p style={{ color: '#fff', fontSize: '20px' }}>{item.username}</p>
+                    {users.length > 0 ? users.map((user: {id: string, username: string, email: string, password: string, created_at: string, updated_at: string}) => (
+                        <div key={user.id} style={{ width: '100%', borderRadius: 12, padding: 12, }}>
+                            <table>
+                                <tr style={{textAlign: 'left', padding: 4}}>
+                                    <th>#</th>
+                                    <th>Nome</th>
+                                    <th>E-mail</th>
+                                    {/* <th>Cri</th>
+                                    <th>At</th> */}
+                                </tr>
+                                <tr>
+                                    <td>{user.id}</td>
+                                    <td>{user.username}</td>
+                                    <td>{user.email}</td>
+                                    {/* <td>{user.created_at}</td>
+                                    <td>{user.updated_at}</td> */}
+                                </tr>
+                            </table>
                         </div>
-                    })}
+                    )) : <p>Loading</p>}
                 </div>
             </HStack>
         </div>

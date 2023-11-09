@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
       <main style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <HStack space={16} style={{flexWrap: 'wrap', justifyContent: 'center'}}>
+        <div className='reverse-w' style={{gap: 16}}>
           <VStack space={32} style={{ alignItems: 'center' }}>
             <Image alt='foto perfil' src='/images/header/foto.jpg' width={100} height={100} style={{ borderRadius: '100%' }} />
             <VStack>
@@ -27,13 +27,14 @@ export default function Home() {
               <SubTitle>Desenvolvedor Web e Mobile</SubTitle>
             </VStack>
           </VStack>
+          
           <VStack style={{ height: '100%', justifyContent: 'flex-end'}}>
             <p style={{fontWeight: '500'}}>Tecnologias</p>
             <HStack space={32}>
               <p>Nodejs | React | Nextjs | Angular | PHP</p>
             </HStack>
           </VStack>
-        </HStack>
+        </div>
       </main>
   )
 }

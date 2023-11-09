@@ -6,6 +6,8 @@ import VStack from "./Stack/VStack";
 import Title from "./Title";
 import SubTitle from "./SubTitle";
 
+import Space from "./Spacer";
+
 
 export {
     Button,
@@ -14,4 +16,6 @@ export {
 
     Title,
     SubTitle,
+
+    Space,
 }
