@@ -20,7 +20,7 @@ export default function Home() {
       <main>
         <div style={{width: "100%"}}>
           <VStack space={32} style={{ alignItems: 'center' }}>
-            <Image alt='foto perfil' src='/images/header/foto.jpg' width={100} height={100} style={{ borderRadius: '100%' }} />
+            <Image priority alt='foto perfil' src='/images/header/foto.jpg' width={100} height={100} style={{ borderRadius: '100%' }} />
             <VStack style={{ alignItems: 'center', margin: '40px 0'}}>
               <h1 style={{ fontSize: '18px', fontWeight: '600', }}>Nilton Rocha</h1>
               <h3 style={{ fontSize: '12.5px', color: '#606060', fontWeight: '500' }}>Desenvolvedor Web e Mobile</h3>

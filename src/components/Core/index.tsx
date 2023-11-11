@@ -6,7 +6,8 @@ import VStack from "./Stack/VStack";
 import Title from "./Title";
 import SubTitle from "./SubTitle";
 
-import Space from "./Spacer";
+import VSpace from "./Spacer/VSpace";
+import HSpace from "./Spacer/HSpace";
 
 
 export {
@@ -17,5 +18,6 @@ export {
     Title,
     SubTitle,
 
-    Space,
+    VSpace,
+    HSpace,
 }

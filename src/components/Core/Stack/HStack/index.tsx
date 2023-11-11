@@ -1,15 +1,15 @@
 import { CSSProperties } from 'react'
 import styles from './HStack.module.scss'
 
-const HStack = ({children, space = 0, className = "", style}: {children: React.ReactNode, space?: number, className?: string, style?: CSSProperties}) => {
+const HStack = ({children, space, className = "", style, mobile = null}: {children: React.ReactNode, space?: number | null, className?: string, style?: CSSProperties, mobile?: boolean | null}) => {
 
     var styled = {
-        gap: style?.gap ? style.gap : space,
+        gap: style?.gap ? style.gap : space === null ? 0 : space,
         ...style
     }
 
     return (
-        <div className={`${className}`}>
+        <div className={mobile === null ? '' : mobile === null ? '' : mobile ? 'mobile' : 'desktop'}>
             <div className={`${styles.container} ${className}`} style={styled}>
                 {children}
             </div>

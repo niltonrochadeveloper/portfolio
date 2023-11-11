@@ -4,6 +4,12 @@
 
 First, follow these steps to get my project up and running:
 
+0. **Conditions to run:
+- next 14
+- node >=18.17.0
+- typescript
+
+
 1. **Clone the dev repository** to your local machine:
 
    ```bash

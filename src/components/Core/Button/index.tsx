@@ -8,5 +8,9 @@ export const Button = styled.button`
     width: 100%;
     color: #fff;
     border-radius: 50px;
-    max-width: 240px;
+    max-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 `

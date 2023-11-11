@@ -71,21 +71,7 @@ p {
 }
 
 
-    @media screen and (min-width: 767px) {
-        .reverse-w {
-            flex-direction: row-reverse;
-            display: flex;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .reverse-w {
-            text-align: center;
-            flex-wrap: wrap;
-            display: flex;
-            justify-content: center;
-        }
-    }
+    
 
 
 .center {
