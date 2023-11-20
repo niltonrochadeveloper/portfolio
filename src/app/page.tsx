@@ -11,7 +11,7 @@ export default function Home() {
       <main className={styles.container}>
         <div className={styles.reverseW}>
           <VStack space={32} className={styles.alignCenter}>
-          <Image priority alt='foto perfil' src='/images/header/foto.jpg' width={100} height={100} style={{ borderRadius: '100%' }} />
+          <Image priority alt='foto perfil' src='./images/header/foto.jpg' width={100} height={100} style={{ borderRadius: '100%' }} />
             <VStack space={0} className={styles.textAlignCenter} classContainer={styles.textAlignCenter}>
               <Title fontWeight='600' center >Nilton Rocha</Title>
               <SubTitle style={{color: '#969696', fontWeight: '500'}}>Desenvolvedor Web e Mobile</SubTitle>
