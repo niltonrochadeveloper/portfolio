@@ -4,11 +4,11 @@ import Image from 'next/image'
 
 import styles from './page.module.scss'
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { Menu, NavBar } from '@/components/shared';
 
 export default function Home() {
 
-  return (
-      <main className={styles.container}>
+  return (    
         <div className={styles.reverseW}>
           <VStack space={32} className={styles.alignCenter}>
           <Image priority alt='foto perfil' src='./images/header/foto.jpg' width={100} height={100} style={{ borderRadius: '100%' }} />
@@ -37,6 +37,5 @@ export default function Home() {
             </a>
           </VStack>
         </div>
-      </main>
   )
 }
