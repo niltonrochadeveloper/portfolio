@@ -18,10 +18,8 @@ export default function Contato() {
   }
 
   return (
-      <main style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <div>
-          <p>Contato</p>
-        </div>
-      </main>
-  )
+    <div>
+      <p>Contato</p>
+    </div>
+)
 }

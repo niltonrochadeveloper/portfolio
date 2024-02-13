@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 
 
-export default function Sobre() {
+export default function Contato() {
 
   const [ showModal, setShowModal ] = useState(false)
 
@@ -18,8 +18,8 @@ export default function Sobre() {
   }
 
   return (
-      <div>
-        <p>Sobre</p>
-      </div>
-  )
+    <div>
+      <p>Login</p>
+    </div>
+)
 }

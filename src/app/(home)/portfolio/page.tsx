@@ -18,10 +18,8 @@ export default function Portfólio() {
   }
 
   return (
-      <main style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <div>
-          <p>Portfólio</p>
-        </div>
-      </main>
-  )
+    <div>
+      <p>Portfólio</p>
+    </div>
+)
 }
