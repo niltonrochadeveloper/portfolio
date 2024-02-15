@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import useStore from "@/store";
 
-const useHomeHandler = () => {
+const useDashboardHandler = () => {
 
     const { useAuthStore: { isSignIn, resetAuth, setSignIn, setToken, token },
     useThemeStore: { setTheme, theme },
@@ -28,4 +28,4 @@ const useHomeHandler = () => {
     }
 }
 
-export default useHomeHandler
+export default useDashboardHandler

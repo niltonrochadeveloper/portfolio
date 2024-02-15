@@ -1,26 +1,26 @@
-import { create, createStore } from "zustand";
+import { create } from "zustand";
 
-interface AuthState {
+interface State {
     isSignIn: boolean,
     token: string,
 }
 
-interface AuthActions {
+interface Actions {
     setSignIn: (isSignIn: boolean) => void
     setToken: (token: string) => void
     resetAuth: () => void
 }
 
-const defaultState: AuthState ={
+const initialState: State ={
     isSignIn: false,
     token: '',
 }
 
-export type AuthStore = AuthState & AuthActions
+export type AuthStore = State & Actions
 
 export const useAuthStore = create<AuthStore>()((set) => ({
-    ...defaultState,
+    ...initialState,
     setSignIn: (isSignIn) => set((state) => ({ ...state, isSignIn })),
     setToken: (token) => set((state) => ({ ...state, token })),
-    resetAuth: () => set(defaultState),
+    resetAuth: () => set(initialState),
 }))

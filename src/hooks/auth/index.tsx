@@ -1,11 +1,12 @@
-import { useAuthStore } from "@/store/Auth";
-import { useUserStore } from "@/store/User";
+import useStore from "@/store"
 
 
 const useAuthHandler = () => {
 
-    const { isSignIn, setSignIn, setToken, token, resetAuth } = useAuthStore((state) => state)
-    const { name, setUser, resetUser } = useUserStore((state) => state)
+    const { useAuthStore: { isSignIn, resetAuth, setSignIn, setToken, token },
+    useThemeStore: { setTheme, theme },
+    useUserStore: { name, resetUser, setUser }
+ } = useStore()
 
     const Authenticator = () => {
         
