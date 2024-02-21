@@ -1,3 +1,5 @@
+import { auth } from "@/firebase.config";
+import { Authenticator } from "@/services/Auth";
 import useStore from "@/store";
 import Image from "next/image";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -16,7 +18,7 @@ const LoginForm = () => {
     }
   }
 
-  const { useUserStore: { setUser } } = useStore()
+  const { useUserStore: { setUser }, useAuthStore: { setToken, isSignIn, setSignIn, resetAuth, token } } = useStore()
 
   const {register, handleSubmit, formState: { errors, isLoading }, formState } = useForm<any>(validation)
 
@@ -25,8 +27,8 @@ const LoginForm = () => {
   const onSubmit: SubmitHandler<LoginFormProps> = async (data) => {
     await sleep(2000);
     try {
-      console.log('data', data)
-      setUser(data.email)
+      await Authenticator(data)
+
     } catch (error) {
       console.log('error', error)
     }
@@ -44,15 +46,15 @@ const LoginForm = () => {
               alt="Your Company"
             />
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Sign in to your account
+              Acesse sua conta
             </h2>
           </div>
   
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-6" method="POST" action="" onSubmit={handleSubmit(onSubmit)}>
+            <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                  Email address
+                  Email
                 </label>
                 <div className="mt-2">
                   <input
