@@ -1,4 +1,3 @@
-import { auth } from "@/firebase.config";
 import { Authenticator } from "@/services/Auth";
 import useStore from "@/store";
 import Image from "next/image";
