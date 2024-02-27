@@ -1,6 +1,5 @@
 'use client'
 
-import { Header } from "@/components/shared"
 import { Metadata } from "next"
 import { HStack, Title, VStack } from "@/components/Core"
 import { useState } from "react"
@@ -18,7 +17,6 @@ const DashBoardLayout = ({ children }: HomeProps) => {
   return (
     <main>
       <VStack space={16} >
-        <Header.HeaderDashboard open={openModal} setOpen={setOpenModal} />
         {children}
       </VStack>
       <Tailwind.Dialog open={openModal} setOpen={setOpenModal}>
