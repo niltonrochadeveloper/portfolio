@@ -1,5 +1,4 @@
 import { useQuery } from "react-query"
-import { signInWithEmailAndPassword, auth } from "@/firebase.config";
 import { AuthenticatorProps } from "./types";
 import useAuthHandler from "@/hooks/auth";
 
@@ -20,15 +19,6 @@ export const Authenticator = ({email, password}: AuthenticatorProps) => {
 
   const { setSignIn } = useAuthHandler()
 
-  signInWithEmailAndPassword(auth, email, password).then((res) => {
-    const user: any = auth.currentUser
-    // setToken(user.accessToken)
-    console.log('auth', auth.currentUser)
-  }).catch((error) => {
-    console.log('error', error)
-  }).finally(
-
-  )
 }
 
 export const AuthService = {
