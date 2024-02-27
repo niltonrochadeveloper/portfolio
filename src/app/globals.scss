@@ -27,60 +27,27 @@ p {
     font-size: 14px;
 }
 
-@media screen and (min-width: 767px) {
-    
-    .mobile {
-        display: none;
-    }
-    
-    .desktop {
-        display: block;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    
-    .mobile {
-        display: block;
-    }
-    
-    .desktop {
-        display: none;
-    }
-}
-
-.row-reverse {
-    flex-direction: row-reverse;
-}
-
-.column-reverse {
-    flex-direction: column-reverse;
-}
-
-.reverse {
+.center {
     display: flex;
     position: absolute;
-    justify-content: space-between;
-    top: 0;
-    padding: 12px 16px;
+    justify-content: center;
     width: 100vw;
-    
-    @media screen and (max-width: 768px) {
-        flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 767px) {    
+    .mobile {
+        display: none;
+    }    
+    .desktop {
+        display: block;
     }
 }
 
-
-    
-
-
-.center {
-    
-    
-    @media screen and (max-width: 768px) {
-        display: flex;
-            position: absolute;
-            justify-content: center;
-            width: 100vw;
+@media screen and (max-width: 768px) {    
+    .mobile {
+        display: block;
+    }    
+    .desktop {
+        display: none;
     }
 }

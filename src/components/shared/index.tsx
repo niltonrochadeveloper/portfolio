@@ -1,7 +1,6 @@
 import NavBar from "./Navbar";
-import Menu from "./Menu";
-
+import { Header } from "./Headers";
 export {
     NavBar,
-    Menu,
+    Header
 }

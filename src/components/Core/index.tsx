@@ -9,12 +9,10 @@ import SubTitle from "./SubTitle";
 import VSpace from "./Spacer/VSpace";
 import HSpace from "./Spacer/HSpace";
 
-
 export {
     Button,
     HStack,
     VStack,
-
     Title,
     SubTitle,
 
