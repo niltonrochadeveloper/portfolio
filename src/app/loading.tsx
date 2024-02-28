@@ -3,7 +3,9 @@
 const Loading = () => {
 
     return (
-        <span className="text-sm font-medium">Loading...</span>
+        <div className="flex justify-center items-center h-screen w-screen">
+            <span className="text-sm font-medium">Loading...</span>
+        </div>
     )
 }
 

@@ -3,8 +3,7 @@
 import Image from 'next/image'
 
 import styles from './page.module.scss'
-import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { NavBar } from '@/components/shared';
+import { FaGithub, FaInstagram, FaLinkedinIn, FaBars } from 'react-icons/fa';
 import { Tailwind } from '@/components/Tailwind';
 import { useState } from 'react';
 import LoginForm from '@/components/shared/Login';
@@ -16,14 +15,13 @@ export default function Home() {
 
   return (    
     <>
-      <div id='sobre' className='h-screen container '>
-        <div className='w-full flex justify-center gap-16 items-center h-full'>
-          <div className='overflow-hidden rounded-full flex items-center object-center justify-center text-center'>
-            <Image src="/images/header/foto.jpg" width={240} height={240} alt={'foto perfil'} />
-            {/* <div className='w-60 h-60 bg-slate-500'></div> */}
+      <div id='sobre' className='h-screen'>
+        <div className='w-full lg:flex lg:flex-row -mt-20 flex-col flex lg:flex-nowrap flex-wrap justify-center lg:gap-16 items-center h-screen'>
+          <div className='flex justify-center'>
+            <Image className='rounded-full' src="/images/header/foto.jpg" width={240} height={240} alt={'foto perfil'} />
           </div>
           <div>
-            <p><b>Olá,</b></p>
+            <p className='font-bold'>Olá,</p>
             <p>meu nome é <b>Nilton Rocha</b> e sou um</p>
             <h1>Desenvolvedor</h1>
             <p>Trabalho com aplicações WEB e MOBILE</p>
@@ -35,7 +33,7 @@ export default function Home() {
           <p>Explore minha</p>
           <h2 id='experiencia' className='text-3xl font-medium text-slate-700 pt-1'>Experiência</h2>
         </div>
-        <div className='w-full grid grid-cols-2 flex-row gap-4'>
+        <div className='w-full grid lg:grid-cols-2 flex-row gap-4'>
           <div className='rounded-xl w-full border-[1px] border-slate-500 min-w-fit p-4'>
             <div className='pb-6 pt-2'>
               <h2 className='font-semibold text-slate-700 text-center text-2xl'>Desenvolvimento Frontend</h2>

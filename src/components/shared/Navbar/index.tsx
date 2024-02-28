@@ -6,27 +6,29 @@ import { usePathname } from "next/navigation";
 import styles from './Navbar.module.scss'
 import { NavProps } from "./types";
 import { useThemeStore } from "@/store/Theme";
+import { useState } from "react";
+import { Button } from "@/components/Core";
+import { FaBars, FaWindowClose } from 'react-icons/fa';
 
-const NavBar = ({nav}: {nav: NavProps[]}) => {
+const NavBar: React.FC<NavProps> = ({setShowMenu, showMenu}) => {
 
     const pathname = usePathname()
-
     const { theme } = useThemeStore()
 
     return (
-        <div className="flex-row flex items-center justify-center gap-12">
-            {nav.map((item: NavProps) => (
-                <div key={item.id}>
-                    <Link  className={`${theme === 'light' ? 'text-gray-800' : 'text-white'}`} href={item.href}>
-                    <div className="flex-row flex items-center gap-1 relative">
-                        <span className="text-sm font-medium">{item.name}</span>
-                    </div>
-                        {pathname === item.href && <span className={`absolute ${theme === 'light' ? 'bg-gray-800' : 'bg-white'} rounded-full h-1 w-8`}></span>}
-                    </Link>
-                </div>
-            ))}
+        <div>
+            {!showMenu && <FaBars className="lg:hidden text-2xl" onClick={() => setShowMenu(!showMenu)} />}
+            <ul className={`${!showMenu ? 'hidden' : 'fixed h-full top-0 left-0 z-50 bg-white pl-8 gap-4 p-28 lg:py-0 flex-col flex lg:flex-row pr-12'} lg:bg-transparent lg:w-full lg:h-full lg:pl-0 lg:pr-0 lg:relative lg:flex lg:gap-12`}>
+            {showMenu && <FaWindowClose className="lg:hidden text-2xl absolute top-8 right-4" onClick={() => setShowMenu(!showMenu)} />}
+                <li className="text-2xl"><Link href="/#sobre">Sobre</Link></li>
+                <li className="text-2xl"><Link href="/#experiencia">Experiência</Link></li>
+                <li className="text-2xl"><Link href="/blog">Blog</Link></li>
+                <li className="text-2xl"><Link href="/#projetos">Projetos</Link></li>
+                <li className="text-2xl"><Link href="/#contato">Contato</Link></li>
+            </ul>
+            {showMenu && <div onClick={() => setShowMenu(false)} className="lg:hidden z-10 w-full h-full top-0 left-0 fixed bg-black opacity-30"></div>}
         </div>
     )
-};
+}
 
 export default NavBar;

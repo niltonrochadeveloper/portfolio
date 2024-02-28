@@ -26,8 +26,7 @@ export default function RootLayout({
 }) {
   const client = new QueryClient
 
-  const [openModal, setOpenModal] = useState<boolean>(false)
-  const { handleSign, authenticated } = useHomeHandler()
+  
   
   const { theme } = useThemeStore()
 
@@ -37,29 +36,7 @@ export default function RootLayout({
       <html lang="pt-BR">
       <body suppressHydrationWarning={true} className={`${poppins.className} justify-center flex`}>
         <StyledComponentsRegistry>
-        <main className="container">
-      <div className="bg-white rounded-full fixed flex justify-between flex-row container pt-16 pb-4">
-        <h2 className="text-3xl"><b>dev</b>Nilton Rocha</h2>
-        <ul className="inline-flex gap-12">
-          <li className="text-2xl"><Link href="/#sobre">Sobre</Link></li>
-          <li className="text-2xl"><Link href="/#experiencia">Experiência</Link></li>
-          <li className="text-2xl"><Link href="/#blog">Blog</Link></li>
-          <li className="text-2xl"><Link href="/#projetos">Projetos</Link></li>
-          <li className="text-2xl"><Link href="/#contato">Contato</Link></li>
-        </ul>
-      </div>
-      <div className="container">
         {children}
-      </div>
-      <div>
-        <div>
-          <p>footer</p>
-        </div>
-      </div>
-      <Tailwind.Dialog open={openModal} setOpen={setOpenModal}>
-        <LoginForm />
-      </Tailwind.Dialog>
-    </main>
         </StyledComponentsRegistry>        
       </body>
     </html>

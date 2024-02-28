@@ -1,4 +1,6 @@
-import NavBar from "./Navbar";
+import Footer from "./Footer"
+import Header from "./Header"
 export {
-    NavBar,
+    Header,
+    Footer,
 }

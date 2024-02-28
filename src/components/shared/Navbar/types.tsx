@@ -1,8 +1,7 @@
+import { Dispatch, SetStateAction } from "react";
 
 
 export interface NavProps {
-    id: number
-    name: string
-    href: string
-    icon: any
+    showMenu: boolean;
+    setShowMenu: Dispatch<SetStateAction<boolean>>
 }

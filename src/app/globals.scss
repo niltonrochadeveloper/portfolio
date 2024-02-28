@@ -35,19 +35,37 @@ p {
 }
 
 @media screen and (min-width: 767px) {    
-    .mobile {
+    .mobile767 {
         display: none;
     }    
-    .desktop {
+    .desktop767 {
         display: block;
     }
 }
 
 @media screen and (max-width: 768px) {    
-    .mobile {
+    .mobile767 {
         display: block;
     }    
-    .desktop {
+    .desktop767 {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mobile1024 {
+        display: none;
+    }    
+    .desktop1024 {
+        display: block;
+    }
+}
+
+@media (max-width: 1025px) {
+    .mobile1024 {
+        display: block;
+    }    
+    .desktop1024 {
         display: none;
     }
 }
