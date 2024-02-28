@@ -14,9 +14,7 @@ const HomeLayout = ({children}: {children: React.ReactNode}) => {
     return (
       <main className="lg:px-24 px-4">
         <Header />
-        <div>
-          {children}
-        </div>
+        {children}
         <Footer />
         <Tailwind.Dialog open={openModal} setOpen={setOpenModal}>
           <LoginForm />
