@@ -2,7 +2,7 @@ import Image from "next/image";
 import { AiOutlineExport } from "react-icons/ai";
 import { ProjectsProps, SourceProps } from "./types";
 
-const Projects = ({ source }: ProjectsProps) => {
+const Projects = ({ source }: any) => {
   return (
     <div className="container flex flex-col items-center justify-center">
       <div className="text-center pb-12">
@@ -12,7 +12,7 @@ const Projects = ({ source }: ProjectsProps) => {
         </h2>
       </div>
       <div className="grid lg:grid-cols-4 grid-cols-2 text-left gap-4 px-4">
-        {source.map((item: SourceProps) => (
+        {source.map((item: any) => (
           <a
             target="_blank"
             className="border rounded-t-xl overflow-hidden"
