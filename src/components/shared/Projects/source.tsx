@@ -2,6 +2,18 @@ import { ProjectsProps, SourceProps } from "./types";
 
 export const source: SourceProps[] = [
   {
+    title: "Aplicativo Trigg",
+    description: "",
+    image: {
+      "1": "/images/projetos/prints/trigg/app/1.png",
+    },
+    tecnologies: "React Native, Redux, Firebase, API Rest",
+    category: {
+      "1": "Aplicativo",
+    },
+    url: "https://trigg.com.br",
+  },
+  {
     title: "Portal de cobrança Trigg",
     description: "",
     image: {
@@ -21,7 +33,7 @@ export const source: SourceProps[] = [
       "1": "/images/projetos/prints/netsofas/1.png",
     },
     tecnologies:
-      "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag, Manager, SEO",
+      "PHP, Wordpress, API Rest, Google Analytics, Google Tag, Manager, SEO",
     category: {
       "1": "Blog",
     },
@@ -33,8 +45,7 @@ export const source: SourceProps[] = [
     image: {
       "1": "/images/projetos/prints/grupocard/card/1.png",
     },
-    tecnologies:
-      "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag, Manager, SEO",
+    tecnologies: "Nodejs, API Rest, Google Analytics, Google Tag, Manager, SEO",
     category: {
       "1": "Site",
     },
@@ -60,8 +71,7 @@ export const source: SourceProps[] = [
     image: {
       "1": "/images/projetos/prints/grupocard/blog/1.png",
     },
-    tecnologies:
-      "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag, Manager, SEO",
+    tecnologies: "Nodejs, API Rest, Google Analytics, Google Tag, Manager, SEO",
     category: {
       "1": "Blog",
     },

@@ -21,13 +21,15 @@ const Projects = ({ source }: ProjectsProps) => {
           >
             <div className="flex flex-col gap-4">
               <div className="relative">
-                <Image
-                  src={item.image[1]}
-                  width={900}
-                  height={900}
-                  alt={`image_${item.title}`}
-                  className="relative z-0 border-b"
-                />
+                <div className="overflow-hidden max-h-[140px]">
+                  <Image
+                    src={item.image[1]}
+                    width={900}
+                    height={900}
+                    alt={`image_${item.title}`}
+                    className="relative z-0 border-b"
+                  />
+                </div>
                 <div className="-bottom-4 w-full absolute flex gap-1 justify-center items-center">
                   <small className="bg-black text-xs text-white h-[20px] px-4 rounded-xl justify-center flex items-center">
                     {item.category[1]}
@@ -39,18 +41,18 @@ const Projects = ({ source }: ProjectsProps) => {
                   )}
                 </div>
               </div>
-              <div className="p-4 flex flex-col gap-4">
+              <div className="relative p-4 flex flex-col gap-4 h-[180px]">
                 <h2 className="font-medium">{item.title}</h2>
                 <p></p>
                 <div className="flex flex-col">
                   <small className="font-semibold">Tecnologias usadas:</small>
                   <small className="font-medium">{item.tecnologies}</small>
                 </div>
+                <div className="absolute bottom-0 right-0 flex justify-end pb-2 pr-2 gap-1 hover:border-b">
+                  <small>Saiba mais</small>
+                  <AiOutlineExport />
+                </div>
               </div>
-            </div>
-            <div className="flex justify-end pb-2 pr-2 gap-1 hover:border-b">
-              <small>Saiba mais</small>
-              <AiOutlineExport />
             </div>
           </a>
         ))}

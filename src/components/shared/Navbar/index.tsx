@@ -42,13 +42,13 @@ const NavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
         >
           <Link href="/#sobre">Sobre</Link>
         </li>
-        <li
+        {/* <li
           className={`text-2xl hover:text-primary ${
             pathname === "/#experiencia" ? "" : ""
           }`}
         >
           <Link href="/#experiencia">Experiência</Link>
-        </li>
+        </li> */}
         <li
           className={`text-2xl hover:text-primary ${
             pathname === "/blog" ? "ext-primary" : ""
@@ -63,13 +63,13 @@ const NavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
         >
           <Link href="/#projetos">Projetos</Link>
         </li>
-        <li
+        {/* <li
           className={`text-2xl hover:text-primary ${
             pathname === "/#contato" ? "" : ""
           }`}
         >
           <Link href="/#contato">Contato</Link>
-        </li>
+        </li> */}
       </ul>
       {showMenu && (
         <div
