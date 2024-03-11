@@ -1,13 +1,15 @@
+import styles from "./skills.module.scss";
+
 const Skills = () => {
   return (
     <div className=" flex flex-col items-center justify-center">
       <div className="text-center pb-12">
-        <p>Explore minha</p>
+        <p>Conheça meus</p>
         <h2
           id="experiencia"
           className="text-3xl font-medium text-slate-700 pt-1"
         >
-          Experiência
+          Skills
         </h2>
       </div>
       <div className="w-full grid lg:grid-cols-2 flex-row gap-4">

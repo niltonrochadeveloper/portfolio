@@ -5,7 +5,7 @@ import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const Hero = () => {
   return (
     <div id="sobre" className="h-screen flex justify-center items-center">
-      <div className="flex lg:gap-40 gap-4 lg:flex-row flex-col -mt-32">
+      <div className="flex lg:gap-40 gap-4 lg:flex-row flex-col">
         <div className="flex flex-col">
           <div className="flex justify-center">
             <Image
