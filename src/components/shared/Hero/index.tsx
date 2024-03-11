@@ -6,11 +6,11 @@ const Hero = () => {
   return (
     <div
       id="sobre"
-      className="container h-screen flex justify-center items-center lg:px-24 px-4"
+      className="container h-screen flex justify-center items-center lg:-mt-20 lg:px-24 px-4"
     >
-      <div className="flex lg:gap-40 gap-4 lg:flex-row flex-col">
-        <div className="flex flex-col">
-          <div className="flex justify-center">
+      <div className="flex lg:gap-40 items-center justify-center gap-4 lg:flex-row flex-col">
+        <div className="flex flex-col ">
+          <div className="flex justify-center pb-2">
             <Image
               className="rounded-full"
               src="/images/header/foto.jpg"
@@ -26,15 +26,25 @@ const Hero = () => {
             <SubTitle center className="text-gray-500">
               Desenvolvedor Web e Mobile
             </SubTitle>
+            <div className="py-4">
+              <SubTitle center className="text-gray-500">
+                TYPESCRIPT | REACT NATIVE | FLUTTER | REACT
+                <br />
+                NEXTJS | NODEJS | ANGULAR | PHP | LARAVEL
+              </SubTitle>
+            </div>
           </div>
           <div className="flex justify-center gap-4 py-4">
-            <a href="">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/nilton.rocha_tito/"
+            >
               <FaInstagram className="text-lg hover:text-primary" />
             </a>
-            <a href="">
+            <a target="_blank" href="https://www.linkedin.com/in/devnilton/">
               <FaLinkedinIn className="text-lg hover:text-primary" />
             </a>
-            <a href="">
+            <a target="_blank" href="https://github.com/niltonrochadeveloper">
               <FaGithub className="text-lg hover:text-primary" />
             </a>
           </div>

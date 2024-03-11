@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      {/* <About /> */}
+      <About />
       {/* <Skills /> */}
       <Projects source={source} />
       {/* <Contact /> */}
