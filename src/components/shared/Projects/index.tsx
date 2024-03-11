@@ -4,7 +4,7 @@ import { ProjectsProps, SourceProps } from "./types";
 
 const Projects = ({ source }: ProjectsProps) => {
   return (
-    <div className="container flex flex-col items-center justify-center">
+    <div className="container flex flex-col items-center justify-center lg:px-24">
       <div className="text-center pb-12">
         <p>Conheça meus</p>
         <h2 id="projetos" className="text-3xl font-medium text-slate-700 pt-1">

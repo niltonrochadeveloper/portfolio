@@ -2,8 +2,10 @@ import NavBar from "../Navbar";
 
 const Footer = () => {
   return (
-    <div className="flex justify-center items-center -mx-4 px-4 pt-16 pb-4 gap-16">
-      <p className="">Criado por Nilton Rocha. Com Nextjs 14 SSR - static</p>
+    <div className="container text-center flex justify-center items-center h-16 lg:pb-0 pb-4 px-12">
+      <p className="">
+        Criado por Nilton Rocha em 2024. Tecnologia usada: Nextjs 14 - static
+      </p>
     </div>
   );
 };

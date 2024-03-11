@@ -11,7 +11,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   const { handleSign, authenticated } = useHomeHandler();
 
   return (
-    <main className="container lg:px-24 px-4">
+    <main className="container">
       <Header />
       {children}
       <Footer />

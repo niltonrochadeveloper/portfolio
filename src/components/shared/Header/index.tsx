@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import NavBar from "../Navbar";
 
@@ -6,7 +8,7 @@ const Header = () => {
 
   return (
     <div
-      className={`relative flex justify-between pt-6 items-center lg:bg-transparent lg:pt-16 lg:pb-4 lg:gap-16`}
+      className={`container relative flex justify-between pt-6 items-center lg:bg-transparent lg:pt-16 lg:pb-4 lg:gap-16 lg:px-24 px-4`}
     >
       <h2 className="text-3xl">
         <b className="text-primary">dev</b>Nilton
