@@ -41,7 +41,7 @@ const Projects = ({ source }: ProjectsProps) => {
                   )}
                 </div>
               </div>
-              <div className="relative p-4 flex flex-col gap-4 h-[180px]">
+              <div className="relative p-4 flex flex-col gap-4 lg:h-[180px] h-[280px]">
                 <h2 className="font-medium">{item.title}</h2>
                 <p></p>
                 <div className="flex flex-col">
