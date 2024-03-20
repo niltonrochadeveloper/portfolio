@@ -3,7 +3,6 @@
 import { Metadata } from "next"
 import { HStack, Title, VStack } from "@/components/Core"
 import { useState } from "react"
-import { Tailwind } from "@/components/Tailwind"
 import LoginForm from "@/components/shared/Login"
 
 interface HomeProps {
@@ -19,9 +18,7 @@ const DashBoardLayout = ({ children }: HomeProps) => {
       <VStack space={16} >
         {children}
       </VStack>
-      <Tailwind.Dialog open={openModal} setOpen={setOpenModal}>
-        <LoginForm />
-      </Tailwind.Dialog>
+      <LoginForm />
     </main>
   )
 }

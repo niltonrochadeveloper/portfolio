@@ -1,7 +1,6 @@
 import styles from "./page.module.scss";
 import { FaGithub, FaInstagram, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { AiOutlineExport } from "react-icons/ai";
-import { Tailwind } from "@/components/Tailwind";
 import { useEffect, useState } from "react";
 import LoginForm from "@/components/shared/Login";
 import UseStore from "@/store";

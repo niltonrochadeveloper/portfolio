@@ -7,7 +7,6 @@ import { Poppins } from "next/font/google";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { useThemeStore } from "@/store/Theme";
 import Link from "next/link";
-import { Tailwind } from "@/components/Tailwind";
 import LoginForm from "@/components/shared/Login";
 import { useState } from "react";
 import useHomeHandler from "@/hooks/home";

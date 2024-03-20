@@ -1,6 +1,5 @@
 "use client";
 
-import { Tailwind } from "@/components/Tailwind";
 import { Footer, Header } from "@/components/shared";
 import LoginForm from "@/components/shared/Login";
 import useHomeHandler from "@/hooks/home";
@@ -15,9 +14,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       {children}
       <Footer />
-      <Tailwind.Dialog open={openModal} setOpen={setOpenModal}>
-        <LoginForm />
-      </Tailwind.Dialog>
+      <LoginForm />
     </main>
   );
 };
