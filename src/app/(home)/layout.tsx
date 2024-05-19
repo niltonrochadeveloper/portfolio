@@ -14,7 +14,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       {children}
       <Footer />
-      <LoginForm />
+      {/* <LoginForm /> */}
     </main>
   );
 };

@@ -53,9 +53,9 @@ const Hero = () => {
           <div>
             <div className="flex justify-around text-center gap-12">
               <div className="max-w-xs">
-                <h2 className="font-semibold">3</h2>
+                <h2 className="font-semibold">4</h2>
                 <p className="text-gray-500 font-medium">Anos de</p>
-                <p className="text-gray-500 font-medium">trabalho</p>
+                <p className="text-gray-500 font-medium">Experiencia</p>
               </div>
               <div className="max-w-xs">
                 <h2 className="font-semibold">+50</h2>
