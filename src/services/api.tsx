@@ -1,27 +1,30 @@
 import { useQuery } from "react-query"
 
+const GET = async ({url, useCache = "no-cache"}: {url: string, useCache: RequestCache, }) => {
+  const response =  await fetch(url.includes('http') ? url : process.env.API_URL + url, {
+      method: "POST",
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': ''
+      },
+      cache: useCache
+  })
+  return response.json()
+}   
 
+const POST = async ({url, payload, useCache = "no-cache"}: {url: string, payload: any, useCache: RequestCache, }) => {
+  const response =  await fetch(url.includes('http') ? url : process.env.API_URL + url, {
+      method: "POST",
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': ''
+      },
+      cache: useCache,
+      body: JSON.stringify(payload)
+  })
+  return response.json()
+}   
 
-const GET = ({url = 'https://api.github.com/repos/niltonrochadeveloper/', token, body}: {url: string, token: string, body: any}) => {
-    const { isLoading, error, data, isFetching } = useQuery('repoData', () =>
-      fetch(url, {
-        method: 'GET',
-        body
-      }).then(res =>
-        res.json()
-      )
-    )
-}
-
-const POST = ({url = 'https://api.github.com/repos/niltonrochadeveloper/', token, body}: {url: string, token: string, body: any}) => {
-    const { isLoading, error, data, isFetching } = useQuery('repoData', () =>
-      fetch(url, {
-        method: 'POST'
-      }).then(res =>
-        res.json()
-      )
-    )
-}
 
 export const api = {
     GET,

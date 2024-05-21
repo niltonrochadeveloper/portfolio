@@ -1,24 +1,36 @@
+import { authService } from "@/services/Auth"
 import useStore from "@/store"
+import axios from "axios"
+import { useRouter } from "next/navigation"
+import { useEffect } from "react"
+import { useMutation, useQuery } from "react-query"
+
 
 
 const useAuthHandler = () => {
 
+    const router = useRouter()
+
     const { useAuthStore: { isSignIn, resetAuth, setSignIn, setToken, token },
     useThemeStore: { setTheme, theme },
-    useUserStore: { name, resetUser, setUser }
+    useUserStore: { user, resetUser, setUser }
  } = useStore()
+    
+    const {triggerAuth, authDataInfo} = authService()
 
-    const Authenticator = () => {
-        
-    }
-
+    useEffect(() => {
+        if (token && user && authDataInfo.isSuccess) {
+            router.push("/blog")
+        }
+    }, [authDataInfo.isSuccess])
+    
     return {
+        triggerAuth,
+        authDataInfo,
         auth: {
             authenticated: isSignIn,
             token,
-            client: {
-                username: name,
-            }
+            client: authDataInfo?.data?.result?.user
         },
         resetAuth,
         setSignIn

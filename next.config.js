@@ -7,6 +7,9 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    env: {
+        API_URL: "https://project-api-ix4dw.ondigitalocean.app"
+    }
 }
 
 module.exports = nextConfig

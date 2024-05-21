@@ -1,7 +1,7 @@
 import { create, createStore } from "zustand";
 
 interface UserState {
-    name: string
+    user: []
 }
 
 interface UserActions {
@@ -10,7 +10,7 @@ interface UserActions {
 }
 
 const defaultState: UserState ={
-    name: ''
+    user: []
 }
 
 export type UserStore = UserState & UserActions

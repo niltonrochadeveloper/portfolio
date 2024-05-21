@@ -1,27 +1,39 @@
-import { useQuery } from "react-query"
+import { useMutation, useQuery } from "react-query"
 import { AuthenticatorProps } from "./types";
 import useAuthHandler from "@/hooks/auth";
 
+import { api } from "../api";
+import axios from "axios";
+import UseStore from "@/store";
+import Router from "next/router";
 
+export const authService = () => {
 
-const Login = ({url = 'https://api.github.com/repos/niltonrochadeveloper/', token, body}: {url: string, token: string, body: any}) => {
-    const { isLoading, error, data, isFetching } = useQuery('repoData', () =>
-      fetch(url, {
-        method: 'GET',
-        body
-      }).then(res =>
-        res.json()
-      )
-    )
+  const { useAuthStore: { setSignIn, setToken },
+    useUserStore: { setUser }
+ } = UseStore()
+
+  const fetchAuth = async (data: {email: string, password: string}) => {
+    return await api.POST({url: "/auth/login", payload: data, useCache: "no-cache" })
+  }    
+
+  const useFetchAuth = useMutation(fetchAuth, {
+    onSuccess: (data) => {
+      console.log('Login bem-sucedido:', data);
+      setSignIn(true)
+      setUser(data.result.user)
+      setToken(data.result.token)
+    },
+    onError: (error) => {
+      console.error('Erro no login:', error);
+    },
+    mutationKey: "fetch-auth"
+  });
+
+return {
+    triggerAuth: useFetchAuth.mutateAsync,
+    authDataInfo: useFetchAuth
 }
+  
+}   
 
-export const Authenticator = ({email, password}: AuthenticatorProps) => { 
-
-  const { setSignIn } = useAuthHandler()
-
-}
-
-export const AuthService = {
-    Login,
-    Authenticator
-}

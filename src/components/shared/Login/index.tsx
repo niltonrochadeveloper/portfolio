@@ -1,4 +1,4 @@
-import { Authenticator } from "@/services/Auth";
+import useAuthHandler from "@/hooks/auth";
 import useStore from "@/store";
 import Image from "next/image";
 import { useState } from "react";
@@ -10,6 +10,9 @@ export interface LoginFormProps {
 }
 
 const LoginForm = () => {
+
+  const { triggerAuth, auth } = useAuthHandler()
+  
 
   const validation = {
     defaultValues: {
@@ -25,13 +28,9 @@ const LoginForm = () => {
   const sleep = (ms: number | undefined) => new Promise(resolve => setTimeout(resolve, ms));
 
   const onSubmit: SubmitHandler<LoginFormProps> = async (data) => {
-    await sleep(2000);
-    try {
-      await Authenticator(data)
-
-    } catch (error) {
-      console.log('error', error)
-    }
+    console.log('onSUbmit')
+    const res = await triggerAuth(data)
+    console.log('res', res)
   }
 
     return (

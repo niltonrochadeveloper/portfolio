@@ -9,13 +9,15 @@ import SubTitle from "./SubTitle";
 import VSpace from "./Spacer/VSpace";
 import HSpace from "./Spacer/HSpace";
 
+import Modal from "./Modal";
+
 export {
     Button,
     HStack,
     VStack,
     Title,
     SubTitle,
-
+    Modal,
     VSpace,
     HSpace,
 }
