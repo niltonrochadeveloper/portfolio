@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 import styles from "./Navbar.module.scss";
 import { NavProps } from "./types";
 import { useThemeStore } from "@/store/Theme";
 import { useState } from "react";
 import { Button } from "@/components/Core";
 import { FaBars, FaWindowClose } from "react-icons/fa";
+import path from "path";
 
 const NavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
   const pathname = usePathname();
@@ -18,7 +18,7 @@ const NavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
     <div>
       {!showMenu && (
         <FaBars
-          className="lg:hidden text-2xl"
+          className="lg:hidden text-lg"
           onClick={() => setShowMenu(!showMenu)}
         />
       )}
@@ -31,45 +31,55 @@ const NavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
       >
         {showMenu && (
           <FaWindowClose
-            className="lg:hidden text-2xl absolute top-8 right-4"
+            className="lg:hidden text-lg absolute top-8 right-4"
             onClick={() => setShowMenu(!showMenu)}
           />
         )}
         <li
-          className={`text-2xl hover:text-primary ${
-            pathname === "/" ? "text-primary" : ""
+          className={`text-lg text-white hover:border-b hover:border-white ${
+            pathname === "/about"
+              ? "border-b border-white"
+              : "border-b border-transparent"
           }`}
         >
-          <Link href="/#sobre">Sobre</Link>
+          <Link href="/about">Sobre</Link>
         </li>
-        {/* <li
-          className={`text-2xl hover:text-primary ${
-            pathname === "/#experiencia" ? "" : ""
+        <li
+          className={`text-lg text-white hover:border-b hover:border-white ${
+            pathname === "/skills"
+              ? "border-b border-white"
+              : "border-b border-transparent"
           }`}
         >
-          <Link href="/#experiencia">Experiência</Link>
-        </li> */}
+          <Link href="/skills">Experiência</Link>
+        </li>
         <li
-          className={`text-2xl hover:text-primary ${
-            pathname === "/blog" ? "ext-primary" : ""
+          className={`text-lg text-white hover:border-b hover:border-white ${
+            pathname === "/blog"
+              ? "border-b border-white"
+              : "border-b border-transparent"
           }`}
         >
           <Link href="/blog">Blog</Link>
         </li>
         <li
-          className={`text-2xl hover:text-primary ${
-            pathname === "/#projectos" ? "" : ""
+          className={`text-lg text-white hover:border-b hover:border-white ${
+            pathname === "/portfolio"
+              ? "border-b border-white"
+              : "border-b border-transparent"
           }`}
         >
-          <Link href="/#projetos">Projetos</Link>
+          <Link href="/portfolio">Portfólio</Link>
         </li>
-        {/* <li
-          className={`text-2xl hover:text-primary ${
-            pathname === "/#contato" ? "" : ""
+        <li
+          className={`text-lg text-white hover:border-b hover:border-white ${
+            pathname === "/contact"
+              ? "border-b border-white"
+              : "border-b border-transparent"
           }`}
         >
-          <Link href="/#contato">Contato</Link>
-        </li> */}
+          <Link href="/contact">Contato</Link>
+        </li>
       </ul>
       {showMenu && (
         <div

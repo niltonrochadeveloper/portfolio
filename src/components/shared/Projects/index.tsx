@@ -1,17 +1,18 @@
 import Image from "next/image";
 import { AiOutlineExport } from "react-icons/ai";
 import { ProjectsProps, SourceProps } from "./types";
+import { Content } from "./styles";
 
 const Projects = ({ source }: ProjectsProps) => {
   return (
-    <div className="container flex flex-col items-center justify-center lg:px-24">
+    <Content>
       <div className="text-center pb-12">
         <p>Conheça meus</p>
         <h2 id="projetos" className="text-3xl font-medium text-slate-700 pt-1">
           Projetos
         </h2>
       </div>
-      <div className="grid lg:grid-cols-4 grid-cols-2 text-left gap-4 px-4">
+      <div className="grid lg:grid-cols-2 grid-cols-2 text-left gap-4">
         {source.map((item: SourceProps, index) => (
           <a
             key={index}
@@ -57,7 +58,7 @@ const Projects = ({ source }: ProjectsProps) => {
           </a>
         ))}
       </div>
-    </div>
+    </Content>
   );
 };
 

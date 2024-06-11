@@ -1,21 +1,26 @@
-import styles from './Title.module.scss'
-import { CSSProperties } from "react";
+"use client";
 
-const Title = ({children, color, fontWeight = '400', fontSize = 18, center = false, className, style}: {children: React.ReactNode, color?: string, fontWeight?: string | number, fontSize?: number | string, center?: boolean, className?: string, style?: CSSProperties}) => {
+import { TitleProps } from "./types";
+import StyledTitle from "./styles";
 
-    var styled = {
-        fontWeight: style?.fontWeight ? style.fontWeight : fontWeight,
-        color: style?.color ? style.color : color,
-        fontSize: style?.fontSize ? style.fontSize : fontSize,
-        textAlign: style?.textAlign ? style.textAlign : center ? 'center' : 'left',
-        ...style
-    }
+const Title: React.FC<TitleProps> = ({
+  children,
+  color,
+  fontWeight = "400",
+  fontSize = 18,
+  center = false,
+  className,
+  style,
+}) => {
+  var styled = {
+    fontWeight: style?.fontWeight ? style.fontWeight : fontWeight,
+    color: style?.color ? style.color : color,
+    fontSize: style?.fontSize ? style.fontSize : fontSize,
+    textAlign: style?.textAlign ? style.textAlign : center ? "center" : "left",
+    ...style,
+  };
 
-    return (
-        <h1 className={`${styles.container} className`} style={styled}>
-            {children}
-        </h1>
-    )
+  return <StyledTitle style={styled}>{children}</StyledTitle>;
 };
 
 export default Title;

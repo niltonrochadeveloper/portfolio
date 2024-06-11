@@ -2,14 +2,12 @@
 
 import StyledComponentsRegistry from "@/lib/registry";
 import "./globals.scss";
-import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { useThemeStore } from "@/store/Theme";
-import Link from "next/link";
-import LoginForm from "@/components/shared/Login";
-import { useState } from "react";
-import useHomeHandler from "@/hooks/home";
+import { ThemeProvider } from "styled-components";
+import { light } from "../../theme/light";
+import { dark } from "../../theme/dark";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,18 +21,22 @@ export default function RootLayout({
 }) {
   const client = new QueryClient();
 
-  const { theme } = useThemeStore();
+  const { theme: asTheme } = useThemeStore();
+
+  const theme = asTheme === "light" ? light : dark;
 
   return (
     <QueryClientProvider client={client}>
-      <html lang="pt-BR">
-        <body
-          suppressHydrationWarning={true}
-          className={`${poppins.className} justify-center flex`}
-        >
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        </body>
-      </html>
+      <ThemeProvider theme={theme}>
+        <html lang="pt-BR">
+          <body
+            suppressHydrationWarning={true}
+            className={`${poppins.className} justify-center flex`}
+          >
+            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          </body>
+        </html>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

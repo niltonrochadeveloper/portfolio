@@ -14,7 +14,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container flex justify-center items-center w-full lg:mt-20 mt-8 py-20 h-10 px-8 bg-slate-400">
+    <div className="container flex justify-center items-center w-full py-20 h-30 px-8 bg-background">
       <div className="grid lg:grid-cols-3 grid-cols-1 w-full gap-4 max-w-[600px]">
         <div className="flex items-center justify-center text-white">
           <p>Entre em contato comigo por e-mail</p>

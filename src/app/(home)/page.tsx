@@ -20,9 +20,9 @@ export default function Home() {
     <div>
       <Hero />
       <About />
-      {/* <Skills /> */}
+      <Skills />
       <Projects source={source} />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 }

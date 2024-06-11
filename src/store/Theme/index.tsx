@@ -1,25 +1,22 @@
 import { create } from "zustand";
 
-type Theme = 'light' | 'dark'
+type Theme = "light" | "dark";
 
 interface State {
-    theme: Theme
+  theme: Theme;
 }
 
 interface Actions {
-    setTheme: (theme: Theme) => void
+  setTheme: (theme: Theme) => void;
 }
 
 const initialState: State = {
-    theme: 'light'
-}
+  theme: "light",
+};
 
-export type ThemeStore = State & Actions
+export type ThemeStore = State & Actions;
 
 export const useThemeStore = create<ThemeStore>()((set) => ({
-    ...initialState,
-    setTheme: (theme) => set({ theme })
-}))
-
-
-
+  ...initialState,
+  setTheme: (theme) => set({ theme }),
+}));

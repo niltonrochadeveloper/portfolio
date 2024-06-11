@@ -1,4 +1,5 @@
-import { Button } from "./Button";
+import Button from "./Button";
+import ButtonCVDownload from "./ButtonCVDownload";
 
 import HStack from "./Stack/HStack";
 import VStack from "./Stack/VStack";
@@ -12,12 +13,13 @@ import HSpace from "./Spacer/HSpace";
 import Modal from "./Modal";
 
 export {
-    Button,
-    HStack,
-    VStack,
-    Title,
-    SubTitle,
-    Modal,
-    VSpace,
-    HSpace,
-}
+  ButtonCVDownload,
+  Button,
+  HStack,
+  VStack,
+  Title,
+  SubTitle,
+  Modal,
+  VSpace,
+  HSpace,
+};

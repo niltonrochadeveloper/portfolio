@@ -1,12 +1,14 @@
 import NavBar from "../Navbar";
+import { Container, Divider } from "./styles";
 
 const Footer = () => {
   return (
-    <div className="container text-center flex justify-center items-center h-16 lg:pb-0 pb-4 px-12">
+    <Container>
+      {/* <Divider /> */}
       <p className="">
-        Criado por Nilton Rocha em 2024. Tecnologia usada: Nextjs 14 - static
+        Criado por Nilton Rocha. @ Copyright 2024. Todos os direitos reservados
       </p>
-    </div>
+    </Container>
   );
 };
 
