@@ -6,4 +6,15 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import About from "./About";
-export { Header, Footer, Projects, Hero, Experience, Contact, About, Skills };
+import BlogHeader from "./Blog/Header";
+export {
+  Header,
+  Footer,
+  Projects,
+  Hero,
+  Experience,
+  Contact,
+  About,
+  Skills,
+  BlogHeader,
+};

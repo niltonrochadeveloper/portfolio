@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import NavBar from "../Navbar";
 import Link from "next/link";
 
-const Header = () => {
+const BlogHeader = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   return (
@@ -21,4 +21,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default BlogHeader;

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const Root = styled.div`
+export const Container = styled.div`
   background-color: #0c0811;
   color: #fff;
-  height: 90.2vh;
+  height: 100vh;
   @media screen and (min-width: 767px) {
     padding: 0 100px;
   }
@@ -15,7 +15,7 @@ export const Root = styled.div`
 export const Content = styled.div``;
 export const Social = styled.div`
   display: flex;
-  margin-top: 1.2rem;
+  margin-top: 1.8rem;
   gap: 3rem;
 `;
 export const Small = styled.small``;

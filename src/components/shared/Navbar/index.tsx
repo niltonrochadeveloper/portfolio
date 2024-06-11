@@ -1,14 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "./Navbar.module.scss";
 import { NavProps } from "./types";
 import { useThemeStore } from "@/store/Theme";
-import { useState } from "react";
-import { Button } from "@/components/Core";
-import { FaBars, FaWindowClose } from "react-icons/fa";
-import path from "path";
+import { FaBars, FaHome, FaWindowClose } from "react-icons/fa";
+import { Link as Scroll } from "react-scroll";
+import Link from "next/link";
 
 const NavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
   const pathname = usePathname();
@@ -35,50 +32,88 @@ const NavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
             onClick={() => setShowMenu(!showMenu)}
           />
         )}
-        <li
-          className={`text-lg text-white hover:border-b hover:border-white ${
-            pathname === "/about"
-              ? "border-b border-white"
-              : "border-b border-transparent"
-          }`}
-        >
-          <Link href="/about">Sobre</Link>
+        <li className="text-lg text-white hover:border-b hover:border-white">
+          <Scroll
+            activeClass="border-b border-white"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="cursor-pointer"
+          >
+            <FaHome size={18} className="mt-1" />
+          </Scroll>
         </li>
-        <li
-          className={`text-lg text-white hover:border-b hover:border-white ${
-            pathname === "/skills"
-              ? "border-b border-white"
-              : "border-b border-transparent"
-          }`}
-        >
-          <Link href="/skills">Experiência</Link>
+        <li className="text-lg text-white hover:border-b hover:border-white">
+          <Scroll
+            activeClass="border-b border-white"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="cursor-pointer"
+          >
+            About
+          </Scroll>
         </li>
-        <li
-          className={`text-lg text-white hover:border-b hover:border-white ${
-            pathname === "/blog"
-              ? "border-b border-white"
-              : "border-b border-transparent"
-          }`}
-        >
-          <Link href="/blog">Blog</Link>
+        <li className="text-lg text-white hover:border-b hover:border-white">
+          <Scroll
+            activeClass="border-b border-white"
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="cursor-pointer"
+          >
+            Skills
+          </Scroll>
         </li>
-        <li
-          className={`text-lg text-white hover:border-b hover:border-white ${
-            pathname === "/portfolio"
-              ? "border-b border-white"
-              : "border-b border-transparent"
-          }`}
-        >
-          <Link href="/portfolio">Portfólio</Link>
+        <li className="text-lg text-white hover:border-b hover:border-white">
+          <Scroll
+            activeClass="border-b border-white"
+            to="portfolio"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="cursor-pointer"
+          >
+            Projects
+          </Scroll>
         </li>
-        <li
-          className={`text-lg text-white hover:border-b hover:border-white ${
-            pathname === "/contact"
-              ? "border-b border-white"
-              : "border-b border-transparent"
-          }`}
-        >
-          <Link href="/contact">Contato</Link>
+        <li className="text-lg text-white hover:border-b hover:border-white">
+          <Scroll
+            activeClass="border-b border-white"
+            to="experience"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="cursor-pointer"
+          >
+            Experience
+          </Scroll>
+        </li>
+        <li className="text-lg text-white hover:border-b hover:border-white">
+          <Scroll
+            activeClass="border-b border-white"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="cursor-pointer"
+          >
+            Contact
+          </Scroll>
+        </li>
+        <li className="text-lg text-white hover:border-b hover:border-white">
+          <Link href="/blog" className="cursor-pointer">
+            Blog
+          </Link>
         </li>
       </ul>
       {showMenu && (

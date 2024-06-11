@@ -1,6 +1,6 @@
-import { ProjectsProps, SourceProps } from "./types";
+import { SourceProps } from "@/components/shared/Projects/types";
 
-export const source: SourceProps[] = [
+export const projetos: SourceProps[] = [
   {
     title: "Aplicativo Trigg",
     description: "",

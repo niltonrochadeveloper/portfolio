@@ -1,17 +1,33 @@
-const Experience = () => {
+import {
+  Container,
+  Article,
+  Content,
+  Description,
+  Title,
+  Card,
+  ContentTitle,
+} from "./styles";
+import { ExperienceProps } from "./types";
+
+const Do: React.FC<ExperienceProps> = ({ source }) => {
   return (
-    <div className="">
-      <div className="text-center pb-12">
-        <p>Explore minha</p>
-        <h2
-          id="experiencia"
-          className="text-3xl font-medium text-slate-700 pt-1"
-        >
-          Experiência
-        </h2>
-      </div>
-    </div>
+    <Container id="do">
+      <Article>
+        <ContentTitle>
+          <Title>O que eu faço</Title>
+          <Description>
+            Loren Ipsum dolor, sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </Description>
+        </ContentTitle>
+        <Content>
+          {source.map((experience) => (
+            <Card>{experience.company}</Card>
+          ))}
+        </Content>
+      </Article>
+    </Container>
   );
 };
 
-export default Experience;
+export default Do;

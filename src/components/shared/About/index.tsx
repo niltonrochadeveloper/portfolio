@@ -2,7 +2,7 @@ import { Content, Paragraph } from "./styles";
 
 const About = () => {
   return (
-    <Content>
+    <Content id="about">
       <div className="text-center pb-8">
         <p>um pouco</p>
         <h2 className="text-3xl font-medium text-slate-700 pt-1">Sobre mim</h2>

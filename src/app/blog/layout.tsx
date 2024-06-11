@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Modal } from "@/components/Core";
-import { Footer, Header } from "@/components/shared";
+import { BlogHeader, Footer, Header } from "@/components/shared";
 import LoginForm from "@/components/shared/Login";
 import useHomeHandler from "@/hooks/home";
 import { useEffect, useState } from "react";
@@ -11,7 +11,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <main>
-      <Header />
+      <BlogHeader />
       {/* <Button onClick={() => setOpenModal(!openModal)}>Login</Button> */}
       {children}
       <Footer />

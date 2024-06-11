@@ -12,7 +12,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main>
       <Header />
-      {/* <Button onClick={() => setOpenModal(!openModal)}>Login</Button> */}
+      <Button onClick={() => setOpenModal(!openModal)}>Login</Button>
       {children}
       <Footer />
       <Modal

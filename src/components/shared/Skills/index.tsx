@@ -2,7 +2,7 @@ import { Container } from "./styles";
 
 const Skills = () => {
   return (
-    <Container>
+    <Container id="skills">
       <div>
         <h2>Building stuff since befire the 1st generation Iphone</h2>
       </div>
