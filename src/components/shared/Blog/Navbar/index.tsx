@@ -3,36 +3,31 @@
 import { usePathname } from "next/navigation";
 import { NavProps } from "./types";
 import { useThemeStore } from "@/store/Theme";
-import { FaBars, FaHome, FaWindowClose } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import { Link as Scroll } from "react-scroll";
 import Link from "next/link";
+import {
+  BackDrop,
+  Container,
+  ContentList,
+  FaBars,
+  List,
+  FaWindowClose,
+} from "./styles";
 
 const BlogNavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
   const pathname = usePathname();
   const { theme } = useThemeStore();
 
   return (
-    <div>
-      {!showMenu && (
-        <FaBars
-          className="lg:hidden text-lg"
+    <Container>
+      <FaBars $showMenu={showMenu} onClick={() => setShowMenu(!showMenu)} />
+      <ContentList $showMenu={showMenu}>
+        <FaWindowClose
+          $showMenu={showMenu}
           onClick={() => setShowMenu(!showMenu)}
         />
-      )}
-      <ul
-        className={`${
-          !showMenu
-            ? "hidden"
-            : "fixed h-full top-0 left-0 z-50 bg-white pl-8 gap-4 p-28 lg:py-0 flex-col flex lg:flex-row pr-12"
-        } lg:bg-transparent lg:w-full lg:h-full lg:pl-0 lg:pr-0 lg:relative lg:flex lg:gap-12`}
-      >
-        {showMenu && (
-          <FaWindowClose
-            className="lg:hidden text-lg absolute top-8 right-4"
-            onClick={() => setShowMenu(!showMenu)}
-          />
-        )}
-        <li className="text-lg text-white hover:border-b hover:border-white">
+        <List>
           <Scroll
             activeClass="border-b border-white"
             to="home-blog"
@@ -43,20 +38,18 @@ const BlogNavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
           >
             <FaHome size={18} className="mt-1" />
           </Scroll>
-        </li>
-        <li className="text-lg text-white hover:border-b hover:border-white">
+        </List>
+        <List>
           <Link href="/blog/contact" className="cursor-pointer">
             Contact
           </Link>
-        </li>
-      </ul>
-      {showMenu && (
-        <div
-          onClick={() => setShowMenu(false)}
-          className="lg:hidden z-10 w-full h-full top-0 left-0 fixed bg-black opacity-30"
-        ></div>
-      )}
-    </div>
+        </List>
+      </ContentList>
+      <BackDrop
+        $showMenu={showMenu}
+        onClick={() => setShowMenu(false)}
+      ></BackDrop>
+    </Container>
   );
 };
 
