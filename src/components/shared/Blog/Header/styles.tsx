@@ -1,9 +1,9 @@
 "use client";
 
 import NextLink, { LinkProps } from "next/link";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 
-export const Header = styled.header<any>`
+export const Container = styled.header<any>`
   width: 100%;
   position: fixed;
   display: flex;

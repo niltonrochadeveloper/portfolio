@@ -25,7 +25,7 @@ export default function Home() {
       <About />
       <Skills />
       <Experience source={experiences} />
-      {/* <Projects source={projetos} /> */}
+      <Projects source={projetos} />
       <Contact />
     </>
   );

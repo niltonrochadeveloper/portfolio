@@ -1,6 +1,7 @@
 "use client";
 import { SubmitHandler, FormSubmitHandler, useForm } from "react-hook-form";
 import { AiOutlineMail } from "react-icons/ai";
+import { Container } from "./styles";
 
 export interface FieldsProps {
   email: string;
@@ -14,9 +15,9 @@ const Contact = () => {
   };
 
   return (
-    <div
+    <Container
       id="contact"
-      className="container flex justify-center items-center w-full py-20 h-30 px-8 bg-background"
+      // className="container flex justify-center items-center w-full h-screen py-20 h-30 px-8 bg-background"
     >
       <div className="grid lg:grid-cols-3 grid-cols-1 w-full gap-4 max-w-[600px]">
         <div className="flex items-center justify-center text-white">
@@ -47,7 +48,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

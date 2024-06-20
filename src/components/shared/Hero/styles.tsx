@@ -1,7 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   background-color: #0c0811;
+  /* background: linear-gradient(
+    90deg,
+    rgba(2, 25, 35, 1) 0%,
+    rgba(2, 25, 35, 0.9) 35%,
+    rgba(2, 25, 35, 1) 100%
+  ); */
   color: #fff;
   height: 100vh;
   @media screen and (min-width: 767px) {

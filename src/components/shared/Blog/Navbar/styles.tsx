@@ -1,6 +1,6 @@
 "use client";
 
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {
   FaBars as RIFaBars,
   FaHome,
@@ -11,6 +11,22 @@ import { NavProps } from "./types";
 export const Container = styled.section``;
 export const Article = styled.article``;
 export const Content = styled.div``;
+const animatePosition = keyframes`
+  0% {
+    transform: translateX(-240px)
+  }
+  100% {
+    transform: translateX(0px)
+  }
+`;
+const animatePositionClose = keyframes`
+  0% {
+    transform: translateX(0px)
+  }
+  100% {
+    transform: translateX(-240px)
+  }
+`;
 export const ContentList = styled.ul<{ $showMenu: boolean }>`
   gap: 1.6rem;
   font-weight: 600;
@@ -18,7 +34,7 @@ export const ContentList = styled.ul<{ $showMenu: boolean }>`
   height: 40px;
   justify-content: center;
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.text};
     display: flex;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -27,7 +43,8 @@ export const ContentList = styled.ul<{ $showMenu: boolean }>`
     z-index: 100;
     height: 100%;
     width: 240px;
-    ${(props) => (props.$showMenu ? "position: fixed" : "display: none")};
+    /* ${(props) => (props.$showMenu ? "position: fixed" : "display: none")}; */
+    position: fixed;
     left: 0;
     top: 0;
     padding-top: 60px;
@@ -35,8 +52,12 @@ export const ContentList = styled.ul<{ $showMenu: boolean }>`
     gap: 1rem;
     color: black;
     align-items: flex-start;
+    animation: ${({ $showMenu }) =>
+        $showMenu ? animatePosition : animatePositionClose}
+      0.3s ease-in-out;
   }
 `;
+
 export const List = styled.li``;
 
 export const FaBars = styled(RIFaBars)<{ $showMenu: boolean }>`
@@ -65,7 +86,7 @@ export const FaWindowClose = styled(RIFaWindowClose)<{ $showMenu: boolean }>`
   }
 `;
 export const BackDrop = styled.div<{ $showMenu: boolean }>`
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.text};
   z-index: 10;
   width: 100%;
   height: 100%;

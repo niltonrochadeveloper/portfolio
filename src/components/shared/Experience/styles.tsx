@@ -3,7 +3,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  background-color: #0c0811;
+  background-color: ${({ theme }) => theme.colors.background};
   color: #fff;
   height: auto;
   padding: 0 100px;

@@ -2,8 +2,8 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  background-color: #0c0811;
-  color: #fff;
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
   height: 100vh;
   display: flex;
   justify-content: center;

@@ -23,7 +23,9 @@ export default function RootLayout({
 
   const { theme: asTheme } = useThemeStore();
 
-  const theme = asTheme === "light" ? light : dark;
+  // TODO: 1 modificar quando quiser mudar para light ou dark
+  // const theme = asTheme === "light" ? light : dark;
+  const theme = asTheme === "light" ? dark : light;
 
   return (
     <QueryClientProvider client={client}>
