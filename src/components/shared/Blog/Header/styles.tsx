@@ -2,35 +2,14 @@
 
 import NextLink, { LinkProps } from "next/link";
 import styled from "styled-components";
+import {
+  Container as HeaderContainer,
+  Link as LinkContainer,
+  LogoTitle as LogoTitleContainer,
+} from "../../Header/styles";
 
-export const Container = styled.header<any>`
-  width: 100%;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  height: 42px;
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    background-color: ${({ theme }) => theme.colors.background};
-    padding: 0 100px;
-  }
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    background-color: ${({ theme }) => theme.colors.background};
-    padding: 0 20px;
-  }
-`;
+export const Container = styled(HeaderContainer)<any>``;
 
-export const Link = styled(NextLink)<LinkProps>`
-  cursor: pointer;
-`;
+export const Link = styled(LinkContainer)<LinkProps>``;
 
-export const LogoTitle = styled.h2`
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    color: ${({ theme }) => theme.colors.text};
-  }
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    color: ${({ theme }) => theme.colors.text};
-  }
-`;
+export const LogoTitle = styled(LogoTitleContainer)``;

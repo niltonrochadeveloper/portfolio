@@ -10,6 +10,7 @@ export const Container = styled.header<any>`
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  z-index: 100;
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     background-color: ${({ theme }) => theme.colors.background};
     padding: 0 100px;

@@ -18,9 +18,6 @@ import {
 import { FaHome } from "react-icons/fa";
 
 const NavBar: React.FC<NavProps> = ({ setShowMenu, showMenu }) => {
-  const pathname = usePathname();
-  const { theme } = useThemeStore();
-
   return (
     <Container>
       <FaBars $showMenu={showMenu} onClick={() => setShowMenu(!showMenu)} />

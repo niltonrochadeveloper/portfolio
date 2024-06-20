@@ -11,7 +11,7 @@ import { NavProps } from "./types";
 export const Container = styled.section``;
 export const Article = styled.article``;
 export const Content = styled.div``;
-const animatePosition = keyframes`
+export const animatePosition = keyframes`
   0% {
     transform: translateX(-240px)
   }
@@ -19,7 +19,7 @@ const animatePosition = keyframes`
     transform: translateX(0px)
   }
 `;
-const animatePositionClose = keyframes`
+export const animatePositionClose = keyframes`
   0% {
     transform: translateX(0px)
   }
