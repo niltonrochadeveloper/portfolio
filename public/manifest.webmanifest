@@ -1,0 +1,16 @@
+{
+  "name": "Nilton Rocha | Desenvolvedor Web e Mobile",
+  "short_name": "devNilton",
+  "description": "Portfólio de Nilton Rocha, desenvolvedor web e mobile com foco em UI/UX, performance, IA e SEO.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c1228",
+  "theme_color": "#7f3cff",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

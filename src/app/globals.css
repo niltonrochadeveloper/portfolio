@@ -1,26 +1,241 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --font-sans: var(--font-poppins);
+  --page-gradient: linear-gradient(
+    180deg,
+    #f7f5ff 0%,
+    #f2f7ff 60%,
+    #f8f8ff 100%
+  );
+  --background: #f7f5ff;
+  --foreground: #1f163a;
+  --card: rgba(255, 255, 255, 0.8);
+  --card-foreground: #1f163a;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #1f163a;
+  --primary: linear-gradient(90deg, #7f3cff 0%, #00c6ff 100%);
+  --primary-foreground: #fff;
+  --secondary: #7f3cff;
+  --secondary-foreground: #fff;
+  --muted: #ece9ff;
+  --muted-foreground: #514a7b;
+  --accent: #e9f3ff;
+  --accent-foreground: #1f163a;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e3defc;
+  --input: #e3defc;
+  --ring: #8b5cf6;
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: #f3f1ff;
+  --sidebar-foreground: #1f163a;
+  --sidebar-primary: #7f3cff;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: #00c6ff;
+  --sidebar-accent-foreground: #fff;
+  --sidebar-border: #e3defc;
+  --sidebar-ring: #00c6ff;
+}
+
+.dark {
+  --page-gradient: linear-gradient(
+    180deg,
+    #120b25 0%,
+    #111638 60%,
+    #0c1228 100%
+  );
+  --background: #120b25;
+  --foreground: #f4f4ff;
+  --card: rgba(24, 24, 37, 0.8);
+  --card-foreground: #f4f4ff;
+  --popover: rgba(24, 24, 37, 0.95);
+  --popover-foreground: #f4f4ff;
+  --primary: linear-gradient(90deg, #7f3cff 0%, #00c6ff 100%);
+  --primary-foreground: #fff;
+  --secondary: #7f3cff;
+  --secondary-foreground: #fff;
+  --muted: #201a38;
+  --muted-foreground: #b7b4d7;
+  --accent: #1a2445;
+  --accent-foreground: #f4f4ff;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgba(255, 255, 255, 0.12);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #38bdf8;
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    background: var(--page-gradient) fixed;
+    color: var(--foreground);
+    min-height: 100vh;
+    font-family: var(--font-sans);
+  }
+  html {
+    @apply font-sans;
   }
 }
 
-body {
-  background: var(--background);
+.post-content {
+  color: color-mix(in srgb, var(--foreground) 85%, transparent);
+  line-height: 1.75;
+}
+
+.post-content > :first-child {
+  margin-top: 0;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content h1 {
+  font-size: 1.875rem;
+}
+
+.post-content h2 {
+  font-size: 1.5rem;
+}
+
+.post-content h3 {
+  font-size: 1.25rem;
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol {
+  margin-block: 1rem;
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.5rem;
+}
+
+.post-content ul {
+  list-style: disc;
+}
+
+.post-content ol {
+  list-style: decimal;
+}
+
+.post-content a {
+  color: #7f3cff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.post-content a:hover {
+  color: #00c6ff;
+}
+
+.post-content code {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.875em;
+  background: color-mix(in srgb, var(--foreground) 10%, transparent);
+  padding: 0.15em 0.4em;
+  border-radius: 0.35rem;
+}
+
+.post-content pre {
+  background: color-mix(in srgb, var(--foreground) 8%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-block: 1.25rem;
+}
+
+.post-content pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.post-content blockquote {
+  border-left: 3px solid #7f3cff;
+  padding-left: 1rem;
+  margin-block: 1.25rem;
+  color: color-mix(in srgb, var(--foreground) 70%, transparent);
+  font-style: italic;
+}
+
+.post-content img {
+  border-radius: 0.5rem;
+  margin-block: 1.25rem;
 }

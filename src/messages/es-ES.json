@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "backToTop": "Volver arriba",
+    "themeLight": "Tema claro",
+    "themeDark": "Tema oscuro",
+    "language": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "Portafolio 2026",
+    "role": "Desarrollador Web y Móvil",
+    "viewProjects": "Ver Proyectos",
+    "requestCv": "Pedir CV"
+  },
+  "about": {
+    "eyebrow": "Un poco",
+    "title": "Sobre mí",
+    "body": "Desarrollador Front-end Semi-Senior con más de 6 años de experiencia, incluida experiencia en fintech, con dominio de UX y UI. Tengo una mirada minuciosa y escribo mucho código para mis propios proyectos. Amo lo que hago: pasar al desarrollo fue la mejor decisión que tomé."
+  },
+  "stats": {
+    "experience": "Años de experiencia",
+    "projects": "Proyectos realizados",
+    "clients": "Clientes satisfechos"
+  },
+  "highlights": {
+    "title": "Diferenciales",
+    "product": {
+      "title": "Enfoque en producto",
+      "desc": "Entregas pensadas en el resultado del negocio, no solo en el código."
+    },
+    "uiux": {
+      "title": "UX / UI",
+      "desc": "Mirada minuciosa para interfaz, usabilidad y detalle."
+    },
+    "performance": {
+      "title": "Rendimiento y SEO",
+      "desc": "Sitios rápidos, optimizados y bien posicionados."
+    },
+    "fintech": {
+      "title": "Experiencia en fintech",
+      "desc": "Productos financieros con seguridad y escala."
+    }
+  },
+  "tech": {
+    "title": "Tecnologías",
+    "subtitle": "Nivel de especialización (0 a 10) en las principales herramientas que uso."
+  },
+  "skills": {
+    "title": "IA & Skills",
+    "subtitle": "Dominio en inteligencia artificial y competencias que aplico en los productos.",
+    "genai": "IA Generativa / LLMs",
+    "apis": "Integración de APIs de IA",
+    "automation": "Automatizaciones con IA",
+    "prompt": "Ingeniería de Prompts"
+  },
+  "projects": {
+    "eyebrow": "Conoce mis",
+    "title": "Proyectos",
+    "personalBadge": "Proyecto personal",
+    "learnMore": "Saber más",
+    "techUsed": "Tecnologías usadas",
+    "mindflow": {
+      "title": "MindFlow",
+      "type": "Proyecto personal",
+      "description": "¡Mi proyecto personal por fin cobra vida! Este es uno de los primeros módulos: creación de workflows y mapas mentales — pensado para organizar ideas, estructurar procesos y dar claridad a la ejecución. Esta es solo la base de un ecosistema mayor, con otros productos que se integrarán con él. ¡Pronto, muchas novedades por aquí!"
+    }
+  },
+  "contact": {
+    "title": "¿Hablamos?",
+    "subtitle": "Escríbeme por WhatsApp y cuéntame sobre tu proyecto.",
+    "cta": "Contacto"
+  },
+  "blog": {
+    "eyebrow": "Insights y artículos",
+    "title": "Blog",
+    "subtitle": "Contenido sobre desarrollo web, móvil, UI/UX y detrás de cámaras de mis proyectos.",
+    "empty": "Aún no hay publicaciones. Vuelve pronto.",
+    "readPost": "Leer publicación",
+    "back": "Volver al blog"
+  },
+  "footer": {
+    "builtWith": "Sitio desarrollado con",
+    "and": "y",
+    "navTitle": "Navegación",
+    "socialTitle": "Redes",
+    "rights": "Todos los derechos reservados."
+  }
+}

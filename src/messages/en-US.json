@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Projects",
+    "contact": "Contact",
+    "backToTop": "Back to top",
+    "themeLight": "Light theme",
+    "themeDark": "Dark theme",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "Portfolio 2026",
+    "role": "Web and Mobile Developer",
+    "viewProjects": "View Projects",
+    "requestCv": "Request CV"
+  },
+  "about": {
+    "eyebrow": "A little",
+    "title": "About me",
+    "body": "Mid-level Front-end Developer with over 6 years of experience, including work in fintech, with expertise in UX and UI. I have a sharp eye for detail and build plenty of code for my own projects. I love what I do — moving into development was the best choice I ever made."
+  },
+  "stats": {
+    "experience": "Years of experience",
+    "projects": "Projects delivered",
+    "clients": "Happy clients"
+  },
+  "highlights": {
+    "title": "What sets me apart",
+    "product": {
+      "title": "Product focus",
+      "desc": "Deliverables built around business outcomes, not just code."
+    },
+    "uiux": {
+      "title": "UX / UI",
+      "desc": "A sharp eye for interface, usability and detail."
+    },
+    "performance": {
+      "title": "Performance & SEO",
+      "desc": "Fast, optimized and well-ranked websites."
+    },
+    "fintech": {
+      "title": "Fintech experience",
+      "desc": "Financial products built with security and scale."
+    }
+  },
+  "tech": {
+    "title": "Technologies",
+    "subtitle": "Proficiency level (0 to 10) in the main tools I use."
+  },
+  "skills": {
+    "title": "AI & Skills",
+    "subtitle": "Expertise in artificial intelligence and skills I apply across products.",
+    "genai": "Generative AI / LLMs",
+    "apis": "AI API integration",
+    "automation": "AI automation",
+    "prompt": "Prompt engineering"
+  },
+  "projects": {
+    "eyebrow": "Check out my",
+    "title": "Projects",
+    "personalBadge": "Personal project",
+    "learnMore": "Learn more",
+    "techUsed": "Tech used",
+    "mindflow": {
+      "title": "MindFlow",
+      "type": "Personal project",
+      "description": "My personal project is finally coming to life! This is one of the first modules: building workflows and mind maps — designed to organize ideas, structure processes and bring clarity to execution. This is just the foundation of a larger ecosystem, with other products that will integrate with it. Lots of news coming soon!"
+    }
+  },
+  "contact": {
+    "title": "Let's talk?",
+    "subtitle": "Reach out on WhatsApp and tell me about your project.",
+    "cta": "Contact"
+  },
+  "blog": {
+    "eyebrow": "Insights & articles",
+    "title": "Blog",
+    "subtitle": "Content about web and mobile development, UI/UX and the behind-the-scenes of my projects.",
+    "empty": "No posts published yet. Check back soon.",
+    "readPost": "Read post",
+    "back": "Back to the blog"
+  },
+  "footer": {
+    "builtWith": "Site built with",
+    "and": "and",
+    "navTitle": "Navigation",
+    "socialTitle": "Social",
+    "rights": "All rights reserved."
+  }
+}

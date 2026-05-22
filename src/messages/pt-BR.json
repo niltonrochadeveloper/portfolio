@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Início",
+    "blog": "Blog",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "backToTop": "Voltar ao topo",
+    "themeLight": "Tema claro",
+    "themeDark": "Tema escuro",
+    "language": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "Portfólio 2026",
+    "role": "Desenvolvedor Web e Mobile",
+    "viewProjects": "Ver Projetos",
+    "requestCv": "Pedir CV"
+  },
+  "about": {
+    "eyebrow": "Um pouco",
+    "title": "Sobre mim",
+    "body": "Desenvolvedor Front-end Pleno, tenho mais de 6 anos na área, incluindo experiência com fintech, expertise em UX e UI, tenho um olhar clínico e crio bastante código para mim mesmo. Amo o que faço e foi a melhor escolha que fiz, migrar para o desenvolvimento."
+  },
+  "stats": {
+    "experience": "Anos de experiência",
+    "projects": "Projetos realizados",
+    "clients": "Clientes satisfeitos"
+  },
+  "highlights": {
+    "title": "Diferenciais",
+    "product": {
+      "title": "Foco em produto",
+      "desc": "Entregas pensadas no resultado do negócio, não só no código."
+    },
+    "uiux": {
+      "title": "UX / UI",
+      "desc": "Olhar clínico para interface, usabilidade e detalhe."
+    },
+    "performance": {
+      "title": "Performance & SEO",
+      "desc": "Sites rápidos, otimizados e bem ranqueados."
+    },
+    "fintech": {
+      "title": "Experiência em fintech",
+      "desc": "Produtos financeiros com segurança e escala."
+    }
+  },
+  "tech": {
+    "title": "Tecnologias",
+    "subtitle": "Nível de especialidade (0 a 10) nas principais ferramentas que uso."
+  },
+  "skills": {
+    "title": "IA & Skills",
+    "subtitle": "Domínio em inteligência artificial e competências que aplico nos produtos.",
+    "genai": "IA Generativa / LLMs",
+    "apis": "Integração de APIs de IA",
+    "automation": "Automações com IA",
+    "prompt": "Engenharia de Prompt"
+  },
+  "projects": {
+    "eyebrow": "Conheça meus",
+    "title": "Projetos",
+    "personalBadge": "Projeto pessoal",
+    "learnMore": "Saiba mais",
+    "techUsed": "Tecnologias usadas",
+    "mindflow": {
+      "title": "MindFlow",
+      "type": "Projeto pessoal",
+      "description": "Meu projeto pessoal finalmente saindo do papel! Este é um dos primeiros módulos: criação de workflows e mapas mentais — pensado para organizar ideias, estruturar processos e dar clareza à execução. Essa é só a base de um ecossistema maior, com outros produtos que irão se integrar a ele. Em breve, muitas novidades por aqui!"
+    }
+  },
+  "contact": {
+    "title": "Vamos conversar?",
+    "subtitle": "Chame no WhatsApp e me conte sobre seu projeto.",
+    "cta": "Contato"
+  },
+  "blog": {
+    "eyebrow": "Insights & artigos",
+    "title": "Blog",
+    "subtitle": "Conteúdos sobre desenvolvimento web, mobile, UI/UX e bastidores dos meus projetos.",
+    "empty": "Nenhum post publicado ainda. Volte em breve.",
+    "readPost": "Ler post",
+    "back": "Voltar para o blog"
+  },
+  "footer": {
+    "builtWith": "Site desenvolvido com",
+    "and": "e",
+    "navTitle": "Navegação",
+    "socialTitle": "Redes",
+    "rights": "Todos os direitos reservados."
+  }
+}
