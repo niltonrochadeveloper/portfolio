@@ -41,7 +41,7 @@ const projects: Project[] = [
     tech: "React Native, Redux, Firebase, API Rest",
     url: "https://trigg.com.br",
     image:
-      "https://devniltonrocha.com.br/images/projetos/prints/trigg/app/1.png",
+      "/projetos/prints/trigg/app/1.png",
   },
   {
     title: "Portal de cobranca Trigg",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://negocie.trigg.com.br",
     image:
-      "https://devniltonrocha.com.br/images/projetos/prints/trigg/negocie/1.png",
+      "/projetos/prints/trigg/negocie/1.png",
   },
   {
     title: "Blog NetSofas",
@@ -57,7 +57,7 @@ const projects: Project[] = [
     tech: "PHP, Wordpress, API Rest, Google Analytics, Google Tag Manager, SEO",
     url: "https://blog.netsofas.com.br",
     image:
-      "https://devniltonrocha.com.br/images/projetos/prints/netsofas/1.png",
+      "/projetos/prints/netsofas/1.png",
   },
   {
     title: "Site institucional GrupoCard",
@@ -65,7 +65,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Google Analytics, Google Tag Manager, SEO",
     url: "https://www.grupocard.com.br",
     image:
-      "https://devniltonrocha.com.br/images/projetos/prints/grupocard/card/1.png",
+      "/projetos/prints/grupocard/card/1.png",
   },
   {
     title: "Intranet",
@@ -73,7 +73,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://intranet.grupocard.com.br",
     image:
-      "https://devniltonrocha.com.br/images/projetos/prints/grupocard/intranet/1.png",
+      "/projetos/prints/grupocard/intranet/1.png",
   },
   {
     title: "Blog GrupoCard",
@@ -81,7 +81,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Google Analytics, Google Tag Manager, SEO",
     url: "https://www.grupocard.com.br/blog",
     image:
-      "https://devniltonrocha.com.br/images/projetos/prints/grupocard/blog/1.png",
+      "/projetos/prints/grupocard/blog/1.png",
   },
   {
     title: "CardHub",
@@ -89,7 +89,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://cardhub.grupocard.com.br",
     image:
-      "https://devniltonrocha.com.br/images/projetos/prints/grupocard/cardhub/1.png",
+      "/projetos/prints/grupocard/cardhub/1.png",
   },
   {
     title: "CardMais",
@@ -97,7 +97,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://cardmais.grupocard.com.br",
     image:
-      "https://devniltonrocha.com.br/images/projetos/prints/grupocard/cardmais/1.png",
+      "/projetos/prints/grupocard/cardmais/1.png",
   },
   {
     title: "CardMidia",
@@ -105,7 +105,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://cardmidia.grupocard.com.br",
     image:
-      "https://devniltonrocha.com.br/images/projetos/prints/grupocard/cardmidia/1.png",
+      "/projetos/prints/grupocard/cardmidia/1.png",
   },
 ];
 
@@ -175,7 +175,7 @@ export default function Home() {
                 <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-[#7f3cff]/30 to-[#00c6ff]/30 blur-2xl" />
                 <div className="relative overflow-hidden rounded-2xl border border-border/40 bg-card/80 shadow-lg">
                   <img
-                    src="https://devniltonrocha.com.br/images/header/foto.jpg"
+                    src="/foto.jpg"
                     alt="Nilton Rocha"
                     width={144}
                     height={144}
