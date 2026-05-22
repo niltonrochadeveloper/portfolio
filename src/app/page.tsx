@@ -30,7 +30,7 @@ const highlights = [
 
 const personalProject = {
   url: "#projetos",
-  image: "/projetos/mindflow.png",
+  image: "/projetos/mindflow.jpg",
   tech: "Next.js, React, TypeScript, Canvas, IA",
 };
 
@@ -41,7 +41,7 @@ const projects: Project[] = [
     tech: "React Native, Redux, Firebase, API Rest",
     url: "https://trigg.com.br",
     image:
-      "/projetos/prints/trigg/app/1.png",
+      "/projetos/prints/trigg/app/1.jpg",
   },
   {
     title: "Portal de cobranca Trigg",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://negocie.trigg.com.br",
     image:
-      "/projetos/prints/trigg/negocie/1.png",
+      "/projetos/prints/trigg/negocie/1.jpg",
   },
   {
     title: "Blog NetSofas",
@@ -57,7 +57,7 @@ const projects: Project[] = [
     tech: "PHP, Wordpress, API Rest, Google Analytics, Google Tag Manager, SEO",
     url: "https://blog.netsofas.com.br",
     image:
-      "/projetos/prints/netsofas/1.png",
+      "/projetos/prints/netsofas/1.jpg",
   },
   {
     title: "Site institucional GrupoCard",
@@ -65,7 +65,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Google Analytics, Google Tag Manager, SEO",
     url: "https://www.grupocard.com.br",
     image:
-      "/projetos/prints/grupocard/card/1.png",
+      "/projetos/prints/grupocard/card/1.jpg",
   },
   {
     title: "Intranet",
@@ -73,7 +73,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://intranet.grupocard.com.br",
     image:
-      "/projetos/prints/grupocard/intranet/1.png",
+      "/projetos/prints/grupocard/intranet/1.jpg",
   },
   {
     title: "Blog GrupoCard",
@@ -81,7 +81,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Google Analytics, Google Tag Manager, SEO",
     url: "https://www.grupocard.com.br/blog",
     image:
-      "/projetos/prints/grupocard/blog/1.png",
+      "/projetos/prints/grupocard/blog/1.jpg",
   },
   {
     title: "CardHub",
@@ -89,7 +89,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://cardhub.grupocard.com.br",
     image:
-      "/projetos/prints/grupocard/cardhub/1.png",
+      "/projetos/prints/grupocard/cardhub/1.jpg",
   },
   {
     title: "CardMais",
@@ -97,7 +97,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://cardmais.grupocard.com.br",
     image:
-      "/projetos/prints/grupocard/cardmais/1.png",
+      "/projetos/prints/grupocard/cardmais/1.jpg",
   },
   {
     title: "CardMidia",
@@ -105,7 +105,7 @@ const projects: Project[] = [
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://cardmidia.grupocard.com.br",
     image:
-      "/projetos/prints/grupocard/cardmidia/1.png",
+      "/projetos/prints/grupocard/cardmidia/1.jpg",
   },
 ];
 
