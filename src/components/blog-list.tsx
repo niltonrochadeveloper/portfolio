@@ -23,10 +23,12 @@ export function BlogList({ posts }: Readonly<{ posts: PostMeta[] }>) {
 
   const formatDate = (date?: string) => {
     if (!date) return "";
+    // timeZone fixo: evita divergência servidor/navegador na hidratação.
     return new Date(date).toLocaleDateString(localeMap[locale], {
       day: "2-digit",
       month: "long",
       year: "numeric",
+      timeZone: "UTC",
     });
   };
 
