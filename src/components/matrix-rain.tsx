@@ -117,14 +117,24 @@ export function MatrixRain() {
     };
     document.addEventListener("visibilitychange", onVisibility);
 
-    if (reduceMotion) {
-      drawStatic();
+    // Adia o início da animação para depois do carregamento ficar ocioso,
+    // liberando a thread principal durante a hidratação (melhora TBT/LCP).
+    let idleHandle: number | undefined;
+    let timeoutHandle: ReturnType<typeof setTimeout> | undefined;
+    const begin = () => {
+      if (reduceMotion) drawStatic();
+      else start();
+    };
+    if ("requestIdleCallback" in globalThis) {
+      idleHandle = globalThis.requestIdleCallback(begin, { timeout: 2000 });
     } else {
-      start();
+      timeoutHandle = setTimeout(begin, 500);
     }
 
     return () => {
       stop();
+      if (idleHandle !== undefined) globalThis.cancelIdleCallback(idleHandle);
+      if (timeoutHandle !== undefined) clearTimeout(timeoutHandle);
       globalThis.removeEventListener("resize", resize);
       document.removeEventListener("visibilitychange", onVisibility);
     };
