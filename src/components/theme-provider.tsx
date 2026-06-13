@@ -30,8 +30,6 @@ function applyTheme(theme: Theme) {
 export function ThemeProvider({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  // O primeiro render precisa ser igual no servidor e no cliente, então
-  // começa sempre em "dark". O tema salvo só é lido após a montagem.
   const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
@@ -39,9 +37,6 @@ export function ThemeProvider({
     const stored = localStorage.getItem(STORAGE_KEY);
     const initial: Theme =
       stored === "light" || stored === "dark" ? stored : "dark";
-    // Ler o localStorage só é possível após a montagem, então sincronizar o
-    // estado aqui é intencional — não pode ir para o render inicial sem causar
-    // mismatch de hidratação.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(initial);
     applyTheme(initial);

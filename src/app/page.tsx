@@ -113,7 +113,7 @@ export default function Home() {
   const { t } = useI18n();
 
   const stats = [
-    { value: "+6", label: t("stats.experience") },
+    { value: "+7", label: t("stats.experience") },
     { value: "+50", label: t("stats.projects") },
     { value: "+15", label: t("stats.clients") },
   ];

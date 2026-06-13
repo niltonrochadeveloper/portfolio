@@ -11,8 +11,6 @@ export function ThemeToggle() {
   const isDark = theme === "dark";
   const label = isDark ? t("nav.themeLight") : t("nav.themeDark");
 
-  // Antes da montagem o tema real ainda é desconhecido; um placeholder neutro
-  // evita mismatch de hidratação no ícone.
   let icon = <span className="size-4" />;
   if (mounted) {
     icon = isDark ? <Sun className="size-4" /> : <Moon className="size-4" />;
