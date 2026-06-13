@@ -89,8 +89,8 @@ export default function ClaudeFable5Page() {
 
       <h2>Minha leitura</h2>
       <p>
-        Como desenvolvedor que usa Claude no dia a dia — inclusive este site foi
-        construído com ajuda do Claude Code —, dois pontos me chamam atenção:
+        Como desenvolvedor que usa Claude no dia a dia, dois pontos me chamam
+        atenção:
       </p>
       <p>
         <strong>
