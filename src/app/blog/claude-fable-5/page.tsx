@@ -10,7 +10,7 @@ const post = posts.find((p) => p.slug === "claude-fable-5")!;
 export const metadata: Metadata = {
   title: `${post.title} | Blog`,
   description: post.description,
-  alternates: { canonical: `/blog/${post.slug}` },
+  alternates: { canonical: `/blog/${post.slug}/` },
   openGraph: {
     title: post.title,
     description: post.description,

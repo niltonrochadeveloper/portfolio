@@ -70,7 +70,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-foreground">
+                <Link href="/blog/" className="hover:text-foreground">
                   {t("nav.blog")}
                 </Link>
               </li>

@@ -12,7 +12,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Blog | Nilton Rocha",
   description: "Artigos e insights sobre desenvolvimento web, mobile e UI/UX.",
-  alternates: { canonical: "/blog" },
+  alternates: { canonical: "/blog/" },
 };
 
 export default function BlogPage() {

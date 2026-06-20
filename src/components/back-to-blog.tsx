@@ -8,7 +8,7 @@ export function BackToBlog() {
   const { t } = useI18n();
   return (
     <Link
-      href="/blog"
+      href="/blog/"
       className="text-sm text-foreground/60 transition hover:text-foreground"
     >
       ← {t("blog.back")}

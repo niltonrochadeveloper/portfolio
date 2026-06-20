@@ -49,7 +49,7 @@ export function BlogList({ posts }: Readonly<{ posts: PostMeta[] }>) {
           {posts.map((post) => (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              href={`/blog/${post.slug}/`}
               className="group flex flex-col rounded-lg border border-border/40 bg-card/90 p-6 shadow-lg transition hover:-translate-y-0.5 hover:border-[#7f3cff]/40"
             >
               <span className="text-xs uppercase tracking-wider text-foreground/50">
