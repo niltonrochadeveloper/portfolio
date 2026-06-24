@@ -25,10 +25,15 @@ const dictionaries: Record<Locale, Messages> = {
   "es-ES": esES,
 };
 
-export const LOCALES: { value: Locale; label: string; short: string }[] = [
-  { value: "pt-BR", label: "Português", short: "PT" },
-  { value: "en-US", label: "English", short: "EN" },
-  { value: "es-ES", label: "Español", short: "ES" },
+export const LOCALES: {
+  value: Locale;
+  label: string;
+  short: string;
+  flag: string;
+}[] = [
+  { value: "pt-BR", label: "Português", short: "PT", flag: "🇧🇷" },
+  { value: "en-US", label: "English", short: "EN", flag: "🇺🇸" },
+  { value: "es-ES", label: "Español", short: "ES", flag: "🇪🇸" },
 ];
 
 type LanguageContextValue = {

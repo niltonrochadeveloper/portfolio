@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Languages } from "lucide-react";
 
 import { LOCALES, useI18n } from "@/components/language-provider";
 
@@ -33,7 +32,7 @@ export function LanguageSwitcher() {
         aria-expanded={open}
         className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border/60 bg-card/60 px-2.5 text-xs font-medium text-foreground/80 transition hover:bg-card hover:text-foreground"
       >
-        <Languages className="size-4" />
+        <span className="text-base leading-none">{current.flag}</span>
         {current.short}
       </button>
       {open ? (
@@ -51,11 +50,12 @@ export function LanguageSwitcher() {
                   setLocale(l.value);
                   setOpen(false);
                 }}
-                className={`flex w-full items-center justify-between px-3 py-2 text-sm transition hover:bg-accent ${
+                className={`flex w-full items-center gap-2 px-3 py-2 text-sm transition hover:bg-accent ${
                   l.value === locale ? "text-foreground" : "text-foreground/70"
                 }`}
               >
-                {l.label}
+                <span className="text-base leading-none">{l.flag}</span>
+                <span className="flex-1 text-left">{l.label}</span>
                 <span className="text-xs text-foreground/50">{l.short}</span>
               </button>
             </li>

@@ -18,7 +18,7 @@
   "about": {
     "eyebrow": "Un poco",
     "title": "Sobre mí",
-    "body": "Desarrollador Front-end Senior con más de 7 años de experiencia, incluida experiencia en fintech, con dominio de UX y UI. Tengo una mirada minuciosa y escribo mucho código para mis propios proyectos. Amo lo que hago: pasar al desarrollo fue la mejor decisión que tomé."
+    "body": "Soy periodista y profesional de marketing desde hace más de 12 años y Desarrollador Front-end Senior desde hace más de 7, incluida experiencia en fintech, con dominio de UX y UI. Tengo una mirada minuciosa y escribo mucho código para mis propios proyectos. Amo lo que hago: pasar al desarrollo fue la mejor decisión que tomé."
   },
   "stats": {
     "experience": "Años de experiencia",
@@ -79,7 +79,41 @@
     "subtitle": "Contenido sobre desarrollo web, móvil, UI/UX y detrás de cámaras de mis proyectos.",
     "empty": "Aún no hay publicaciones. Vuelve pronto.",
     "readPost": "Leer publicación",
-    "back": "Volver al blog"
+    "back": "Volver al blog",
+    "searchPlaceholder": "Buscar artículos...",
+    "allCategories": "Todas",
+    "noResults": "No se encontraron artículos.",
+    "categories": {
+      "games": "Games",
+      "tech-ia": "Tecnología e IA",
+      "projetos": "Proyectos personales"
+    },
+    "posts": {
+      "rumor-handheld-sega-cartucho": {
+        "title": "Rumor: Sega estaría preparando una portátil retro de cartucho enfocada en 2D",
+        "description": "Una filtración en Reddit apunta a una portátil de bajo costo ligada a Sega, con pantalla OLED de 5\", cartuchos físicos y foco en juegos 2D. Separo lo que es hecho de lo que es especulación y por qué tiene sentido ahora."
+      },
+      "sonic-35-anos-mega-drive": {
+        "title": "Sonic cumple 35 años: Sega e iam8bit relanzan Sonic 1 y 2 en cartucho de Mega Drive",
+        "description": "Para celebrar los 35 años de Sonic, Sega se unió a iam8bit en la Legacy Cartridge Collection: Sonic 1 y 2 vuelven en cartuchos físicos de Mega Drive, con una edición rara escondida en 1 de cada 8 unidades."
+      },
+      "mods-gta-6": {
+        "title": "El futuro de los mods de GTA 6: qué esperar (y qué podría permitir Rockstar)",
+        "description": "GTA 6 llega con una comunidad de modding que ya transformó GTA V. Qué viene en mods, qué cambia con el nuevo motor y cómo la postura de Rockstar puede definir este escenario."
+      },
+      "desenvolvimento-de-jogos-no-brasil": {
+        "title": "Desarrollo de videojuegos en Brasil: dónde estamos y hacia dónde vamos",
+        "description": "Brasil tiene talento, comunidad y juegos premiados, pero todavía choca con la financiación y el mercado interno. Un panorama honesto de la industria nacional de videojuegos y los caminos para quien quiere entrar."
+      },
+      "qualidade-de-codigo-com-ia": {
+        "title": "Calidad de código en la era de la IA: junior vs senior usando las mismas herramientas",
+        "description": "La IA acelera a todos, pero no nivela la seniority. Qué cambia cuando un junior y un senior usan el mismo asistente, qué pasa con el aprendizaje y el legado, y cómo mantener la calidad en el proceso."
+      },
+      "claude-fable-5": {
+        "title": "Claude Fable 5: el primer modelo Mythos que Anthropic liberó al público",
+        "description": "Anthropic lanzó Claude Fable 5, el primer modelo de clase Mythos disponible para uso general. Qué cambia, cuánto cuesta y mi opinión como dev que usa Claude a diario."
+      }
+    }
   },
   "author": {
     "label": "Escrito por",

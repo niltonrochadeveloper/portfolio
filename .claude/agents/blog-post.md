@@ -33,17 +33,24 @@ lugar quebra a listagem ou o SEO.
      title: "<título>",
      description: "<resumo de 1-2 frases para card e meta description>",
      date: "AAAA-MM-DD", // use a data real de publicação
+     categories: ["<id>"], // uma ou mais: "games" | "tech-ia" | "projetos"
    },
    ```
 
-3. **Crie `src/app/blog/<slug>/page.tsx`** seguindo este esqueleto. Note os
-   detalhes obrigatórios: `canonical` SEMPRE com barra final, `post` lido do
-   registro, conteúdo dentro de `<PostLayout>`.
+   As categorias válidas vivem em `CATEGORIES` no mesmo arquivo. Um post pode
+   ter mais de uma. Se precisar de uma categoria nova, adicione o id em
+   `CategoryId`/`CATEGORIES` e o rótulo em `blog.categories.<id>` nos TRÊS JSONs.
+
+3. **Crie `src/app/blog/<slug>/page.tsx`** seguindo este esqueleto. O post é
+   TOTALMENTE traduzido: `title`, `description` e `body` (HTML em string) vivem
+   num objeto `LocalizedPost` com os três idiomas. O `<PostLayout>` recebe esse
+   objeto e renderiza o idioma ativo. `canonical` SEMPRE com barra final.
 
    ```tsx
    import type { Metadata } from "next";
 
    import { PostLayout } from "@/components/post-layout";
+   import type { LocalizedPost } from "@/components/post-content";
    import { posts } from "@/content/posts";
 
    export const dynamic = "force-static";
@@ -61,22 +68,57 @@ lugar quebra a listagem ou o SEO.
      },
    };
 
+   const content: LocalizedPost = {
+     title: { "pt-BR": "...", "en-US": "...", "es-ES": "..." },
+     description: { "pt-BR": "...", "en-US": "...", "es-ES": "..." },
+     body: {
+       "pt-BR": `<p>...</p><h2>...</h2><ul><li>...</li></ul>`,
+       "en-US": `<p>...</p><h2>...</h2><ul><li>...</li></ul>`,
+       "es-ES": `<p>...</p><h2>...</h2><ul><li>...</li></ul>`,
+     },
+   };
+
    export default function <NomeDoComponente>Page() {
-     return (
-       <PostLayout title={post.title} description={post.description} date={post.date}>
-         {/* conteúdo aqui */}
-       </PostLayout>
-     );
+     return <PostLayout {...content} date={post.date} />;
    }
    ```
 
+   O corpo é HTML em template string (não JSX). Aspas e apóstrofos vão literais
+   (`"`, `'`) — NÃO use `&quot;`/`&apos;` aqui. Use `<p>`, `<h2>`, `<ul>/<li>`,
+   `<strong>`, `<em>`. Um link sai como `<a href="..." target="_blank"
+   rel="noopener noreferrer">...</a>`.
+
 ## Regras de conteúdo e estilo
 
-- **Idioma:** português do Brasil. O conteúdo do post NÃO é traduzido por
-  idioma — não mexa em `src/messages/*.json` para criar um post.
+- **Tradução COMPLETA (OBRIGATÓRIO):** escreva o post inteiro nos TRÊS idiomas
+  — `title`, `description` e o `body` HTML inteiro — dentro do objeto
+  `LocalizedPost` em `pt-BR`, `en-US` e `es-ES`. Escreva primeiro em pt-BR e
+  traduza fielmente para inglês e espanhol (mesma estrutura de seções e listas).
+  O leitor troca o idioma e o post inteiro muda.
+- **Título e resumo TAMBÉM nos JSON (OBRIGATÓRIO):** além do objeto acima, a
+  LISTAGEM do blog lê o título/descrição de `src/messages/{pt-BR,en-US,es-ES}.json`,
+  em `blog.posts.<slug>`. Adicione nos três arquivos:
+
+  ```json
+  "blog": {
+    "posts": {
+      "<slug>": {
+        "title": "<título traduzido para o idioma do arquivo>",
+        "description": "<resumo traduzido para o idioma do arquivo>"
+      }
+    }
+  }
+  ```
+
+  Os textos aqui devem ser idênticos aos do objeto `content` do mesmo idioma.
+  Sem essas chaves, o card aparece só em português.
 - **Estrutura:** parágrafo de abertura, depois seções com `<h2>`, listas com
-  `<ul>/<li>`, fechamento com "Minha leitura" e um convite ao LinkedIn
-  (`https://www.linkedin.com/in/devnilton/`).
+  `<ul>/<li>`, fechamento com "Minha leitura".
+- **Convite ao LinkedIn no fim:** inclua um parágrafo final convidando ao
+  LinkedIn (`https://www.linkedin.com/in/devnilton/`, com
+  `target="_blank" rel="noopener noreferrer"`) APENAS se o post NÃO for da
+  categoria `games`. Posts de games NÃO devem ter o convite/contato ao
+  LinkedIn no final — encerram só com a "Minha leitura".
 - **Tom:** primeira pessoa, opinativo e técnico, como quem escreve da
   experiência — sem soar genérico ou promocional.
 - **Markup é JSX, não Markdown.** Escape aspas e apóstrofos com `&quot;` e
@@ -89,5 +131,10 @@ lugar quebra a listagem ou o SEO.
 
 - Rode o lint nos arquivos tocados e garanta exit 0:
   `pnpm exec eslint src/app/blog/<slug>/page.tsx src/content/posts.ts`
-- Confirme que o slug da pasta, o slug em `posts.ts` e o `canonical` batem.
+- Confirme que os JSONs continuam válidos (ex.:
+  `node -e "require('./src/messages/pt-BR.json')"` para cada idioma).
+- Confirme que o slug da pasta, o slug em `posts.ts`, as chaves
+  `blog.posts.<slug>` nos três JSONs e o `canonical` usam o MESMO slug.
+- Confirme que o `title`/`description` estão traduzidos nos três idiomas.
+- Se o post for de `games`, confirme que NÃO há convite ao LinkedIn no final.
 - A listagem em `/blog/` é automática; não precisa editar `blog-list.tsx`.

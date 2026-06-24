@@ -34,7 +34,12 @@ const techs: Tech[] = [
   { name: "Laravel", slug: "laravel", level: 7 },
   { name: "Figma", slug: "figma", level: 8 },
   { name: "GitHub", slug: "github", level: 8, darkInvert: true },
-  { name: "AWS", slug: "amazonwebservices", variant: "plain-wordmark", level: 9 },
+  {
+    name: "AWS",
+    slug: "amazonwebservices",
+    variant: "plain-wordmark",
+    level: 9,
+  },
   { name: "Google Cloud", slug: "googlecloud", level: 6 },
 ];
 
@@ -54,7 +59,7 @@ function LevelBar({ level }: Readonly<{ level: number }>) {
   return (
     <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-foreground/10">
       <div
-        className="h-full rounded-full bg-gradient-to-r from-[#7f3cff] to-[#00c6ff]"
+        className="h-full rounded-full bg-linear-to-r from-[#7f3cff] to-[#00c6ff]"
         style={{ width: `${level * 10}%` }}
       />
     </div>

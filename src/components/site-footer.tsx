@@ -22,7 +22,7 @@ export function SiteFooter() {
 
   const goToHash = (
     event: React.MouseEvent<HTMLAnchorElement>,
-    hash: string
+    hash: string,
   ) => {
     event.preventDefault();
     if (pathname === "/") {
@@ -35,29 +35,33 @@ export function SiteFooter() {
 
   return (
     <footer className="relative mt-16 border-t border-border/40">
-      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-10">
+      <div className="w-full max-w-400 x-auto px-4 sm:px-6 lg:px-12 py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <Link href="/" className="text-lg font-semibold">
               devNilton
             </Link>
-            <p className="mt-3 flex flex-wrap items-center gap-2 text-sm text-foreground/60">
+            <div className="mt-3 flex flex-col flex-wrap gap-2 text-sm text-foreground/60">
               {t("footer.builtWith")}
-              <img
-                src={`${ICON_BASE}/nextjs/nextjs-original.svg`}
-                alt="Next.js"
-                className="size-5 dark:invert"
-                loading="lazy"
-              />
-              Next.js {t("footer.and")}
-              <img
-                src={`${ICON_BASE}/tailwindcss/tailwindcss-original.svg`}
-                alt="Tailwind CSS"
-                className="size-5"
-                loading="lazy"
-              />
-              Tailwind CSS
-            </p>
+              <div className="flex items-center gap-2">
+                <img
+                  src={`${ICON_BASE}/nextjs/nextjs-original.svg`}
+                  alt="Next.js"
+                  className="size-5 dark:invert"
+                  loading="lazy"
+                />{" "}
+                Next.js {t("footer.and")}
+              </div>
+              <div className="flex items-center gap-2">
+                <img
+                  src={`${ICON_BASE}/tailwindcss/tailwindcss-original.svg`}
+                  alt="Tailwind CSS"
+                  className="size-5"
+                  loading="lazy"
+                />{" "}
+                Tailwind CSS
+              </div>
+            </div>
           </div>
 
           <div>

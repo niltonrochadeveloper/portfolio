@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -96,15 +97,17 @@ export default function RootLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: initScript }} />
-        {/* AdSense: precisa estar no <head> do HTML inicial para o
-            rastreador do Google verificar o site. */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6430324712510623"
-          crossOrigin="anonymous"
-        />
       </head>
       <body>
+        {/* AdSense via next/script: fica fora da árvore de hidratação do React,
+            evitando o mismatch que ocorre quando o AdSense reescreve o <head>.
+            O rastreador do Google encontra o script mesmo assim. */}
+        <Script
+          id="google-adsense"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6430324712510623"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <LanguageProvider>
           <ThemeProvider>{children}</ThemeProvider>
           <CookieConsent />

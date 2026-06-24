@@ -18,7 +18,7 @@
   "about": {
     "eyebrow": "Um pouco",
     "title": "Sobre mim",
-    "body": "Desenvolvedor Front-end Sênior, tenho mais de 7 anos na área, incluindo experiência com fintech, expertise em UX e UI, tenho um olhar clínico e crio bastante código para mim mesmo. Amo o que faço e foi a melhor escolha que fiz, migrar para o desenvolvimento."
+    "body": "Sou jornalista e profissional de marketing há mais de 12 anos e Desenvolvedor Front-end Sênior há mais de 7, incluindo experiência com fintech e expertise em UX e UI. Tenho um olhar clínico e crio bastante código para mim mesmo. Amo o que faço e migrar para o desenvolvimento foi a melhor escolha que fiz."
   },
   "stats": {
     "experience": "Anos de experiência",
@@ -79,7 +79,15 @@
     "subtitle": "Conteúdos sobre desenvolvimento web, mobile, UI/UX e bastidores dos meus projetos.",
     "empty": "Nenhum post publicado ainda. Volte em breve.",
     "readPost": "Ler post",
-    "back": "Voltar para o blog"
+    "back": "Voltar para o blog",
+    "searchPlaceholder": "Buscar artigos...",
+    "allCategories": "Todas",
+    "noResults": "Nenhum artigo encontrado.",
+    "categories": {
+      "games": "Games",
+      "tech-ia": "Tecnologia & IA",
+      "projetos": "Projetos pessoais"
+    }
   },
   "author": {
     "label": "Escrito por",

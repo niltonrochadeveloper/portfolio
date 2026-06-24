@@ -18,7 +18,7 @@
   "about": {
     "eyebrow": "A little",
     "title": "About me",
-    "body": "Senior Front-end Developer with over 7 years of experience, including work in fintech, with expertise in UX and UI. I have a sharp eye for detail and build plenty of code for my own projects. I love what I do — moving into development was the best choice I ever made."
+    "body": "I've been a journalist and marketing professional for over 12 years and a Senior Front-end Developer for over 7, including work in fintech, with expertise in UX and UI. I have a sharp eye for detail and build plenty of code for my own projects. I love what I do — moving into development was the best choice I ever made."
   },
   "stats": {
     "experience": "Years of experience",
@@ -79,7 +79,41 @@
     "subtitle": "Content about web and mobile development, UI/UX and the behind-the-scenes of my projects.",
     "empty": "No posts published yet. Check back soon.",
     "readPost": "Read post",
-    "back": "Back to the blog"
+    "back": "Back to the blog",
+    "searchPlaceholder": "Search articles...",
+    "allCategories": "All",
+    "noResults": "No articles found.",
+    "categories": {
+      "games": "Games",
+      "tech-ia": "Technology & AI",
+      "projetos": "Personal projects"
+    },
+    "posts": {
+      "rumor-handheld-sega-cartucho": {
+        "title": "Rumor: Sega may be preparing a retro cartridge handheld focused on 2D",
+        "description": "A Reddit leak points to a low-cost handheld tied to Sega, with a 5\" OLED screen, physical cartridges and a 2D focus. I separate fact from speculation and why it makes sense right now."
+      },
+      "sonic-35-anos-mega-drive": {
+        "title": "Sonic turns 35: Sega and iam8bit re-release Sonic 1 and 2 on Mega Drive cartridges",
+        "description": "To celebrate Sonic's 35th anniversary, Sega teamed up with iam8bit on the Legacy Cartridge Collection: Sonic 1 and 2 return as physical Mega Drive cartridges, with a rare edition hidden in 1 of every 8 units."
+      },
+      "mods-gta-6": {
+        "title": "The future of GTA 6 mods: what to expect (and what Rockstar might allow)",
+        "description": "GTA 6 arrives with a modding community that already transformed GTA V. What's coming in mods, what changes with the new engine, and how Rockstar's stance could define this scene."
+      },
+      "desenvolvimento-de-jogos-no-brasil": {
+        "title": "Game development in Brazil: where we are and where we're heading",
+        "description": "Brazil has talent, community and award-winning games, but still struggles with funding and the domestic market. An honest overview of the national games industry and the paths for those who want in."
+      },
+      "qualidade-de-codigo-com-ia": {
+        "title": "Code quality in the AI era: junior vs senior using the same tools",
+        "description": "AI speeds everyone up, but it doesn't level out seniority. What changes when a junior and a senior use the same assistant, what happens to learning and legacy, and how to keep quality in the process."
+      },
+      "claude-fable-5": {
+        "title": "Claude Fable 5: the first Mythos model Anthropic released to the public",
+        "description": "Anthropic launched Claude Fable 5, the first Mythos-class model available for general use. What changes, how much it costs, and my take as a dev who uses Claude daily."
+      }
+    }
   },
   "author": {
     "label": "Written by",
