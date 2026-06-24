@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import CookieConsentBanner, { Cookies } from "react-cookie-consent";
 
@@ -8,7 +7,6 @@ import { useI18n } from "@/components/language-provider";
 
 const COOKIE_NAME = "cookie-consent";
 const GA_ID = "G-JS6QQ94RG2";
-const ADSENSE_CLIENT = "ca-pub-6430324712510623";
 
 // Reabre o banner a partir do footer: apaga a escolha e recarrega.
 export function openCookieConsent() {
@@ -21,15 +19,9 @@ export function CookieConsent() {
 
   return (
     <>
-      {/* GA e AdSense carregam sempre, para todos os visitantes. O banner
-          abaixo é apenas informativo (registra a escolha do usuário). */}
+      {/* GA carrega aqui. O AdSense é carregado no <head> do layout (exigência
+          do rastreador do Google). O banner abaixo é apenas informativo. */}
       <GoogleAnalytics gaId={GA_ID} />
-      <Script
-        id="google-adsense"
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
 
       <CookieConsentBanner
         cookieName={COOKIE_NAME}
