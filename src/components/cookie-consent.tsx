@@ -1,45 +1,23 @@
 "use client";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
-import CookieConsentBanner, { Cookies } from "react-cookie-consent";
 
-import { useI18n } from "@/components/language-provider";
-
-const COOKIE_NAME = "cookie-consent";
 const GA_ID = "G-JS6QQ94RG2";
 
-// Reabre o banner a partir do footer: apaga a escolha e recarrega.
+// A mensagem de consentimento (LGPD/GDPR) é gerenciada pela CMP do Google,
+// injetada pelo próprio script do AdSense (carregado no <head> do layout).
+// Esta função reabre essa mensagem a partir do link no footer.
+type GoogleFc = { callbackQueue?: { push: (cb: { CONSENT_DATA_READY?: () => void }) => void }; showRevocationMessage?: () => void };
+
 export function openCookieConsent() {
-  Cookies.remove(COOKIE_NAME);
-  globalThis.location.reload();
+  const fc = (globalThis as unknown as { googlefc?: GoogleFc }).googlefc;
+  if (fc?.showRevocationMessage) {
+    fc.showRevocationMessage();
+  }
 }
 
 export function CookieConsent() {
-  const { t } = useI18n();
-
-  return (
-    <>
-      {/* GA carrega aqui. O AdSense é carregado no <head> do layout (exigência
-          do rastreador do Google). O banner abaixo é apenas informativo. */}
-      <GoogleAnalytics gaId={GA_ID} />
-
-      <CookieConsentBanner
-        cookieName={COOKIE_NAME}
-        enableDeclineButton
-        buttonText={t("consent.accept")}
-        declineButtonText={t("consent.reject")}
-        disableStyles
-        containerClasses="fixed inset-x-0 bottom-0 z-50 mx-auto m-4 flex max-w-3xl flex-col gap-4 rounded-lg border border-border/50 bg-card/95 p-5 shadow-2xl backdrop-blur sm:flex-row sm:items-center sm:justify-between"
-        contentClasses="min-w-0 text-sm text-foreground/70"
-        buttonWrapperClasses="flex shrink-0 gap-2"
-        buttonClasses="rounded-md px-4 py-2 text-sm font-semibold text-white shadow-lg bg-gradient-to-r from-[#7f3cff] to-[#00c6ff]"
-        declineButtonClasses="rounded-md border border-border/60 px-4 py-2 text-sm font-medium text-foreground/80 transition hover:bg-background/60"
-      >
-        <span className="block font-semibold text-foreground">
-          {t("consent.title")}
-        </span>
-        <span className="mt-1 block">{t("consent.message")}</span>
-      </CookieConsentBanner>
-    </>
-  );
+  // GA carrega para todos os visitantes. O AdSense e a mensagem de
+  // consentimento da Europa ficam a cargo da CMP do Google (via <head>).
+  return <GoogleAnalytics gaId={GA_ID} />;
 }
