@@ -3,6 +3,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
 import { BackToBlog } from "@/components/back-to-blog";
+import { PostAuthor } from "@/components/post-author";
+import { AdUnit } from "@/components/ad-unit";
 
 interface PostLayoutProps {
   title: string;
@@ -53,6 +55,10 @@ export function PostLayout({
 
         <div className="mt-8 rounded-lg border border-border/40 bg-card/90 p-6 shadow-lg sm:p-10">
           <div className="post-content mx-auto max-w-3xl">{children}</div>
+          <div className="mx-auto max-w-3xl">
+            <AdUnit slot="0000000000" className="mt-10" />
+            <PostAuthor summary={description} />
+          </div>
         </div>
       </article>
 

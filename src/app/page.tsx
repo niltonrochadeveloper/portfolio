@@ -12,6 +12,7 @@ import { SocialLinks } from "@/components/social-links";
 import { BackToTop } from "@/components/back-to-top";
 import { TechStack } from "@/components/tech-stack";
 import { useI18n } from "@/components/language-provider";
+import { trackEvent } from "@/lib/analytics";
 
 type Project = {
   title: string;
@@ -40,72 +41,63 @@ const projects: Project[] = [
     type: "Aplicativo",
     tech: "React Native, Redux, Firebase, API Rest",
     url: "https://trigg.com.br",
-    image:
-      "/projetos/prints/trigg/app/1.webp",
+    image: "/projetos/prints/trigg/app/1.webp",
   },
   {
     title: "Portal de cobrança Trigg",
     type: "Site",
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://negocie.trigg.com.br",
-    image:
-      "/projetos/prints/trigg/negocie/1.webp",
+    image: "/projetos/prints/trigg/negocie/1.webp",
   },
   {
     title: "Blog NetSofas",
     type: "Blog",
     tech: "PHP, Wordpress, API Rest, Google Analytics, Google Tag Manager, SEO",
     url: "https://blog.netsofas.com.br",
-    image:
-      "/projetos/prints/netsofas/1.webp",
+    image: "/projetos/prints/netsofas/1.webp",
   },
   {
     title: "Site institucional GrupoCard",
     type: "Site",
     tech: "Nodejs, API Rest, Google Analytics, Google Tag Manager, SEO",
     url: "https://www.grupocard.com.br",
-    image:
-      "/projetos/prints/grupocard/card/1.webp",
+    image: "/projetos/prints/grupocard/card/1.webp",
   },
   {
     title: "Intranet",
     type: "Intranet / CMS",
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://intranet.grupocard.com.br",
-    image:
-      "/projetos/prints/grupocard/intranet/1.webp",
+    image: "/projetos/prints/grupocard/intranet/1.webp",
   },
   {
     title: "Blog GrupoCard",
     type: "Blog",
     tech: "Nodejs, API Rest, Google Analytics, Google Tag Manager, SEO",
     url: "https://www.grupocard.com.br/blog",
-    image:
-      "/projetos/prints/grupocard/blog/1.webp",
+    image: "/projetos/prints/grupocard/blog/1.webp",
   },
   {
     title: "CardHub",
     type: "Site",
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://cardhub.grupocard.com.br",
-    image:
-      "/projetos/prints/grupocard/cardhub/1.webp",
+    image: "/projetos/prints/grupocard/cardhub/1.webp",
   },
   {
     title: "CardMais",
     type: "Landing Page",
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://cardmais.grupocard.com.br",
-    image:
-      "/projetos/prints/grupocard/cardmais/1.webp",
+    image: "/projetos/prints/grupocard/cardmais/1.webp",
   },
   {
     title: "CardMidia",
     type: "Landing Page",
     tech: "Nodejs, API Rest, Nextjs, Google Analytics, Google Tag Manager, SEO",
     url: "https://cardmidia.grupocard.com.br",
-    image:
-      "/projetos/prints/grupocard/cardmidia/1.webp",
+    image: "/projetos/prints/grupocard/cardmidia/1.webp",
   },
 ];
 
@@ -149,12 +141,25 @@ export default function Home() {
               asChild
               className="px-6 py-4 text-base font-semibold shadow-xl bg-gradient-to-r from-[#7f3cff] to-[#00c6ff] text-white border-none"
             >
-              <ScrollLink targetId="projetos">
+              <ScrollLink
+                targetId="projetos"
+                onClick={() =>
+                  trackEvent("view_projects_click", { location: "hero" })
+                }
+              >
                 {t("hero.viewProjects")}
               </ScrollLink>
             </Button>
             <Button asChild variant="outline" className="px-6 py-4">
-              <a href="https://wa.me/11989186177?text=ola, ">
+              <a
+                href="https://wa.me/11989186177?text=ola, "
+                onClick={() =>
+                  trackEvent("contact_click", {
+                    method: "whatsapp",
+                    location: "hero",
+                  })
+                }
+              >
                 {t("hero.requestCv")}
               </a>
             </Button>
@@ -245,6 +250,12 @@ export default function Home() {
 
         <a
           href={personalProject.url}
+          onClick={() =>
+            trackEvent("project_click", {
+              project: "mindflow",
+              type: "personal",
+            })
+          }
           className="group relative mb-6 grid overflow-hidden rounded-lg border border-[#7f3cff]/40 bg-card/90 shadow-lg transition hover:-translate-y-0.5 md:grid-cols-2"
         >
           <div className="aspect-video w-full overflow-hidden bg-background/60 md:aspect-auto md:h-full">
@@ -289,6 +300,14 @@ export default function Home() {
             <a
               key={project.title}
               href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() =>
+                trackEvent("project_click", {
+                  project: project.title,
+                  type: project.type,
+                })
+              }
               className="group flex flex-col overflow-hidden rounded-lg bg-card/90 shadow-lg transition hover:-translate-y-0.5"
             >
               <div className="aspect-video w-full overflow-hidden bg-background/60">
@@ -338,10 +357,18 @@ export default function Home() {
         <div className="bg-card/90 rounded-lg p-6 shadow-lg flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h2 className="text-2xl font-bold">{t("contact.title")}</h2>
-            <p className="text-sm text-foreground/70">{t("contact.subtitle")}</p>
+            <p className="text-sm text-foreground/70">
+              {t("contact.subtitle")}
+            </p>
           </div>
           <a
             href="https://wa.me/11989186177?text=ola, "
+            onClick={() =>
+              trackEvent("contact_click", {
+                method: "whatsapp",
+                location: "contact_section",
+              })
+            }
             className="inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-semibold shadow-xl bg-gradient-to-r from-[#7f3cff] to-[#00c6ff] text-white"
           >
             {t("contact.cta")}

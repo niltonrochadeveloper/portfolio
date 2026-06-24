@@ -9,6 +9,14 @@ export type PostMeta = {
 // src/app/blog/<slug>/page.tsx; adicione a entrada aqui ao criar um novo.
 export const posts: PostMeta[] = [
   {
+    slug: "sonic-35-anos-mega-drive",
+    title:
+      "Sonic faz 35 anos: Sega e iam8bit relançam Sonic 1 e 2 em cartucho de Mega Drive",
+    description:
+      "Para celebrar os 35 anos do Sonic, a Sega se uniu à iam8bit na Legacy Cartridge Collection: Sonic 1 e 2 voltam em cartuchos físicos de Mega Drive, com uma edição rara escondida em 1 a cada 8 unidades.",
+    date: "2026-06-24",
+  },
+  {
     slug: "mods-gta-6",
     title:
       "O futuro dos mods de GTA 6: o que esperar (e o que a Rockstar pode permitir)",
