@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 
 import { SocialLinks } from "@/components/social-links";
 import { useI18n } from "@/components/language-provider";
+import { openCookieConsent } from "@/components/cookie-consent";
 
 const ICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
 
@@ -96,8 +97,17 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-border/40 pt-6 text-sm text-foreground/50">
-          © {year} Nilton Rocha. {t("footer.rights")}
+        <div className="mt-8 flex flex-col gap-2 border-t border-border/40 pt-6 text-sm text-foreground/50 sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            © {year} Nilton Rocha. {t("footer.rights")}
+          </span>
+          <button
+            type="button"
+            onClick={openCookieConsent}
+            className="text-left transition hover:text-foreground"
+          >
+            {t("footer.cookies")}
+          </button>
         </div>
       </div>
     </footer>

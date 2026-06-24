@@ -1,5 +1,7 @@
 "use client";
 
+import { trackEvent } from "@/lib/analytics";
+
 type IconProps = { className?: string };
 
 function InstagramIcon({ className }: Readonly<IconProps>) {
@@ -57,6 +59,7 @@ export function SocialLinks({
           rel="noopener noreferrer"
           aria-label={label}
           title={label}
+          onClick={() => trackEvent("social_click", { network: label })}
           className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/60 bg-card/60 text-foreground/80 transition hover:bg-card hover:text-foreground"
         >
           <Icon className="size-4" />

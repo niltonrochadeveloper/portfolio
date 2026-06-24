@@ -3,6 +3,7 @@ import { Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/components/language-provider";
+import { CookieConsent } from "@/components/cookie-consent";
 
 const initScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t="dark"}var e=document.documentElement;e.classList.add(t);var l=localStorage.getItem("locale");if(l==="pt-BR"||l==="en-US"||l==="es-ES"){e.lang=l}}catch(_){document.documentElement.classList.add("dark")}})();`;
 
@@ -99,6 +100,7 @@ export default function RootLayout({
       <body>
         <LanguageProvider>
           <ThemeProvider>{children}</ThemeProvider>
+          <CookieConsent />
         </LanguageProvider>
       </body>
     </html>

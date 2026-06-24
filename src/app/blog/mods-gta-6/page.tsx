@@ -34,6 +34,39 @@ export default function ModsGta6Page() {
         que eles vão se tornar, e quanto a Rockstar vai deixar.
       </p>
 
+      <h2>Quanto deve custar o GTA 6</h2>
+      <p>
+        Antes de falar de mods, vale o assunto que dominou as buscas hoje: o{" "}
+        <strong>preço</strong>. A <strong>Rockstar Games ainda não confirmou o
+        valor oficial</strong>, mas vazamentos recentes em grandes varejistas
+        europeias dão uma boa ideia do patamar esperado.
+      </p>
+      <ul>
+        <li>
+          <strong>Edição padrão:</strong> cerca de{" "}
+          <strong>€89,99</strong> (aproximadamente <strong>R$ 530</strong> na
+          conversão direta).
+        </li>
+        <li>
+          <strong>Edições Deluxe/Premium e Colecionador:</strong> entre{" "}
+          <strong>€119,99 e €199,99</strong> (algo em torno de{" "}
+          <strong>R$ 700 a R$ 1.100</strong> convertendo direto).
+        </li>
+        <li>
+          <strong>No Brasil:</strong> a expectativa é que o preço oficial de
+          lançamento fique entre <strong>R$ 350 e R$ 400</strong> para a edição
+          padrão — valores menores que a conversão direta do euro, seguindo a
+          política de preço regional que vimos em outros lançamentos recentes.
+        </li>
+      </ul>
+      <p>
+        Importante deixar claro: <strong>nada disso é oficial ainda</strong>.
+        São estimativas baseadas em listagens vazadas, que costumam mudar até o
+        anúncio definitivo. De qualquer forma, o GTA 6 confirma a tendência de a
+        nova geração empurrar os jogos AAA para a casa dos €80–90, e o preço
+        regional brasileiro será decisivo para a recepção por aqui.
+      </p>
+
       <h2>A herança que o GTA 6 carrega</h2>
       <p>
         O modding do GTA V não foi um detalhe — foi parte central da longevidade

@@ -81,11 +81,26 @@
     "readPost": "Read post",
     "back": "Back to the blog"
   },
+  "author": {
+    "label": "Written by",
+    "name": "Nilton Rocha",
+    "role": "Web and Mobile Developer",
+    "bio": "Developer with over 7 years of experience in web and mobile, focused on UI/UX, performance, AI and SEO. I'm also a journalist and marketing professional, and a video game enthusiast. I write about development, technology and the behind-the-scenes of my projects.",
+    "summaryLabel": "Post summary"
+  },
   "footer": {
     "builtWith": "Site built with",
     "and": "and",
     "navTitle": "Navigation",
     "socialTitle": "Social",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "cookies": "Cookie preferences"
+  },
+  "consent": {
+    "title": "Cookies and privacy",
+    "message": "We use cookies to analyze traffic and show personalized ads. You can accept or reject. Learn more in our privacy policy.",
+    "accept": "Accept",
+    "reject": "Reject",
+    "manage": "Manage preferences"
   }
 }
